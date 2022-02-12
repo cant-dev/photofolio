@@ -2,6 +2,25 @@
   font-size: 1.5em;
 }
 
+.preview {
+
+  /* width: 80vw; */
+  height: 800px;
+}
+
+.imgArea{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.imgBlock{
+  flex-grow: 1;
+}
+
+img {
+  width: 40%;
+}
+
 .tag {
   color: #a0a0a0;
   text-decoration: none;

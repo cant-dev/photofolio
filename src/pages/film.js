@@ -1,25 +1,23 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
-import Hero from '../components/hero'
+import styles from './film.module.css'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
 
-class RootIndex extends React.Component {
+class FilmIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
-    // const [author] = get(this, 'props.data.allContentfulPerson.edges')
 
     return (
       <Layout location={this.props.location}>
-        {/* <div style={{ background: '#fff' }}> */}
         <div>
           <Helmet title={siteTitle} />
-          {/* <Hero data={author.node} /> */}
+          {/* <div className={styles.hero}>Blog</div> */}
           <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
+            {/* <h2 className="section-headline">Recent articles</h2> */}
             <ul className="article-list">
               {posts.map(({ node }) => {
                 return (
@@ -36,10 +34,10 @@ class RootIndex extends React.Component {
   }
 }
 
-export default RootIndex
+export default FilmIndex
 
 export const pageQuery = graphql`
-  query HomeQuery {
+  query FilmIndexQuery {
     site {
       siteMetadata {
         title
