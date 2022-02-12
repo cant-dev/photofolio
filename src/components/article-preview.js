@@ -1,27 +1,34 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 import styles from './article-preview.module.css'
 
 export default ({ article }) => (
   <div className={styles.preview}>
-    <div className={styles.imgArea}>
-      <div>
-        <div>番号</div>
-        <div>Camera</div>
+    <div className={styles.headBlock}>
+      <div className={styles.leftItem}>
+        <div>
+          <small>Camera</small>
+          <small>4</small>
+        </div>
       </div>
-      <div className={styles.imgBlock}>
+      <div className={styles.imgItem}>
+        {/* <GatsbyImage image={getImage(article.heroImage)} /> */}
         <Img alt="" fluid={article.heroImage.fluid} />
+        {/* <img alt="" src={article.heroImage.fixed.url} /> */}
+        {/* {JSON.stringify(article, null, '++++++++')} */}
       </div>
-      <small>{article.publishDate}</small>
+      <div className={styles.rightItem}>
+        <small>{article.publishDate}</small>
+      </div>
     </div>
     <div>
       <h3 className={styles.previewTitle}>
         <Link to={`/blog/${article.slug}`}>{article.title}</Link>
       </h3>
     </div>
-    
 
     {/* description */}
     {/* <div

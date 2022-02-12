@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet'
 import styles from './film.module.css'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 class FilmIndex extends React.Component {
   render() {
@@ -51,9 +52,10 @@ export const pageQuery = graphql`
           publishDate(formatString: "MMMM Do, YYYY")
           tags
           heroImage {
-            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
+            fluid(maxWidth: 1440, resizingBehavior: PAD) {
               ...GatsbyContentfulFluid_tracedSVG
             }
+            # gatsbyImageData(layout: FULL_WIDTH)
           }
           description {
             childMarkdownRemark {
