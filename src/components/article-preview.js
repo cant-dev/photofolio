@@ -10,7 +10,7 @@ export default ({ article }) => (
     <div className={styles.headBlock}>
       <div className={styles.leftItem}>
         <div>
-          <small>Camera</small>
+          <small>Kodak ULTRAMAX400</small>
           <small>4</small>
         </div>
       </div>

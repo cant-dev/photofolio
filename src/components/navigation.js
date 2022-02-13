@@ -6,9 +6,6 @@ export default () => (
   <nav role="navigation">
     <ul className={styles.navigation}>
       <li className={styles.navigationItem}>
-        <Link to="/">HOME</Link>
-      </li>
-      <li className={styles.navigationItem}>
         <Link to="/film">FiLM</Link>
       </li>
       <li className={styles.navigationItem}>
