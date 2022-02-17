@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+// import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
-import styles from './article-preview.module.css'
+import * as styles from './article-preview.module.css'
 
 export default ({ article }) => (
   <div className={styles.preview}>
@@ -15,10 +15,11 @@ export default ({ article }) => (
         </div>
       </div>
       <div className={styles.imgItem}>
-        {/* <GatsbyImage image={getImage(article.heroImage)} /> */}
-        <Img alt="" fluid={article.heroImage.fluid} />
-        {/* <img alt="" src={article.heroImage.fixed.url} /> */}
-        {/* {JSON.stringify(article, null, '++++++++')} */}
+        <GatsbyImage
+          className=""
+          alt=""
+          image={article.heroImage.gatsbyImageData}
+        />
       </div>
       <div className={styles.rightItem}>
         <small>{article.publishDate}</small>
