@@ -4,7 +4,7 @@ import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
 import styles from './blog.module.css'
 import Layout from '../components/layout'
-import ArticlePreview from '../components/article-preview'
+import BlogTitleItem from '../components/blog-title-item'
 
 class BlogIndex extends React.Component {
   render() {
@@ -15,14 +15,15 @@ class BlogIndex extends React.Component {
       <Layout location={this.props.location}>
         <div>
           <Helmet title={siteTitle} />
-          <div className={styles.hero}>Blog</div>
-          <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
-            <ul className="article-list">
+          <div className={styles.blogIndexWrapper}>
+            <div>
+              Category
+            </div>
+            <ul className={styles.articleList}>
               {posts.map(({ node }) => {
                 return (
                   <li key={node.slug}>
-                    <ArticlePreview article={node} />
+                    <BlogTitleItem article={node} />
                   </li>
                 )
               })}
