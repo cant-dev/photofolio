@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
-import styles from './blog.module.css'
+import * as styles from './blog.module.css'
 import Layout from '../components/layout'
 import BlogTitleItem from '../components/blog-title-item'
 
@@ -16,9 +16,7 @@ class BlogIndex extends React.Component {
         <div>
           <Helmet title={siteTitle} />
           <div className={styles.blogIndexWrapper}>
-            <div>
-              Category
-            </div>
+            <div>Category</div>
             <ul className={styles.articleList}>
               {posts.map(({ node }) => {
                 return (
@@ -49,12 +47,15 @@ export const pageQuery = graphql`
         node {
           title
           slug
-          publishDate(formatString: "MMMM Do, YYYY")
+          publishDate(formatString: "YYYY / M / DD ")
           tags
           heroImage {
-            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              width: 424
+              height: 212
+            )
           }
           description {
             childMarkdownRemark {
