@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
-import styles from './film.module.css'
+import * as styles from './film.module.css'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
@@ -52,10 +52,12 @@ export const pageQuery = graphql`
           publishDate(formatString: "YYYY MMMM")
           tags
           heroImage {
-            fluid(maxWidth: 1440, resizingBehavior: PAD) {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
-            # gatsbyImageData(layout: FULL_WIDTH)
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              width: 424
+              height: 212
+            )
           }
           description {
             childMarkdownRemark {
