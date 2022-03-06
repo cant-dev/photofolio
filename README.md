@@ -1,10 +1,8 @@
-## ⚠️ Please use [the officially supported Contentful Gatsby starter](https://github.com/contentful/starter-gatsby-blog).
+# Contentful Gatsby Starter Blog
 
-# gatsby-contentful-starter
+Create a [Gatsby](http://gatsbyjs.com/) blog powered by [Contentful](https://www.contentful.com).
 
-Gatsby [Contentful](https://www.contentful.com) starter for creating a blog
-
-![The index page of the starter blog](https://rawgit.com/contentful-userland/gatsby-contentful-starter/master/screenshot.jpg "The index page of the starter blog")
+![An article page of the starter blog](./screenshot.png "An article page of the starter blog")
 
 Static sites are scalable, secure and have very little required maintenance. They come with a drawback though. Not everybody feels good editing files, building a project and uploading it somewhere. This is where Contentful comes into play.
 
@@ -12,73 +10,55 @@ With Contentful and Gatsby you can connect your favorite static site generator w
 
 ## Features
 
-* Simple content model and structure. Easy to adjust to your needs.
-* Contentful integration using our [Sync API](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/synchronization/initial-synchronization-of-entries-of-a-specific-content-type)
-* Using our [Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/).
-* Responsive/adaptive images via [gatsby-image](https://www.gatsbyjs.org/packages/gatsby-image/)
-
-## Contribution
-
-This project is part of [contentful-userland](https://github.com/contentful-userland) which means that we’re always open to contributions **and you can be part of userland and shape the project yourself after your first merged pull request**. You can learn more about how contentful userland is organized by visiting [our about repository](https://github.com/contentful-userland/about).
-
-## Requirements
-
-To use this project you have to have a Contentful account. If you don't have one yet you can register at [www.contentful.com/sign-up](https://www.contentful.com/sign-up/).
+- Simple content model and structure. Easy to adjust to your needs.
+- Use the [synchronization feature](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/synchronization) of our [Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/).
+- Responsive/adaptive images via [gatsby-plugin-image](https://www.gatsbyjs.org/packages/gatsby-plugin-image/) and our [Images API](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/synchronization/initial-synchronization-of-entries-of-a-specific-content-type).
 
 ## Getting started
 
-Install [Yarn](https://yarnpkg.com/en/docs/install) (if you haven't already).
+See our [official Contentful getting started guide](https://www.contentful.com/developers/docs/tutorials/general/get-started/).
 
 ### Get the source code and install dependencies.
 
 ```
-$ git clone git@github.com:contentful-userland/gatsby-contentful-starter.git
-$ yarn install
+$ git clone https://github.com/contentful/starter-gatsby-blog.git
+$ npm install
 ```
 
 Or use the [Gatsby CLI](https://www.npmjs.com/package/gatsby-cli).
 
 ```
-$ gatsby new contentful-starter https://github.com/contentful-userland/gatsby-contentful-starter
+$ gatsby new contentful-starter-blog https://github.com/contentful/starter-gatsby-blog/
 ```
 
 ### Set up of the needed content model and create a configuration file
 
-This project comes with a Contentful setup command `yarn run setup`.
+This project comes with a Contentful setup command `npm run setup`.
 
-![Command line dialog of the yarn run setup command](https://rawgit.com/contentful-userland/gatsby-contentful-starter/master/setup.jpg "Command line dialog of the yarn run setup command")
+This command will ask you for a space ID, and access tokens for the Contentful Management and Delivery API and then import the needed content model into the space you define and write a config file (`./.contentful.json`).
 
-This command will ask you for a space ID, and access tokens for the Contentful Management and Delivery API and then import the needed content model into the space you define and write a config file (`./contentful.json`).
-
-`yarn run setup` automates that for you but if you want to do it yourself rename `.contentful.json.sample` to `.contentful.json` and add your configuration in this file.
+`npm run setup` automates that for you but if you want to do it yourself rename `.contentful.json.sample` to `.contentful.json` and add your configuration in this file.
 
 ## Crucial Commands
 
-This project comes with a few handy commands for linting and code fixing. The most important ones are the ones to develop and ship code. You can find the most important commands below.
+### `npm run dev`
 
-### `yarn run dev`
+Run the project locally with live reload in development mode.
 
-Run in the project locally.
-
-### `yarn run build`
+### `npm run build`
 
 Run a production build into `./public`. The result is ready to be put on any static hosting you prefer.
 
-### `yarn run deploy`
+### `npm run serve`
 
-Run a production build into `./public` and publish the site to GitHub pages.
+Spin up a production-ready server with your blog. Don't forget to build your page beforehand.
 
-### `yarn run cleanup-repository`
+## Deployment
 
-Removes all dependencies, scripts and data from the installation script.
+See the [official Contentful getting started guide](https://www.contentful.com/developers/docs/tutorials/general/get-started/).
 
-## Roadmap
+## Contribution
 
-- [x] [make the starter completely responsive](https://github.com/contentful-userland/gatsby-contentful-starter/issues/2)
-- [ ] [include tags](https://github.com/contentful-userland/gatsby-contentful-starter/issues/3)
-- [x] [support traced placeholders](https://github.com/contentful-userland/gatsby-contentful-starter/issues/4)
-- [ ] [add i18n](https://github.com/contentful-userland/gatsby-contentful-starter/issues/6)
+Feel free to open pull requests to fix bugs. If you want to add features, please have a look at the [original version](https://github.com/contentful-userland/gatsby-contentful-starter). It is always open to contributions and pull requests.
 
-## Other resources
-
-- Tutorial video series ["Building a blazing fast website with GatsbyJS and Contentful"](https://www.youtube.com/watch?v=Ek4o40w1tH4&list=PL8KiuH6vpACV-F7jXribe4YveGBhBeG9A) by @Khaledgarbaya
+You can learn more about how Contentful userland is organized by visiting [our about repository](https://github.com/contentful-userland/about).
