@@ -1,10 +1,10 @@
 .blog-index-wrapper {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
 }
 
 .article-list {
-  margin: 0 20px;
+  margin: 0;
   padding: 0;
   list-style: none;
 }

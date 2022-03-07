@@ -22,15 +22,19 @@ font-family: 'IBM Plex Sans', sans-serif; helvitica*/
   --f1-family: 'Roboto', sans-serif;
   --f2-family: 'Didact Gothic', sans-serif;
   --f3-family: 'IBM Plex Sans', sans-serif;
-  --color-font-sub: #bfbfbf;
+  --c-base-black: #3d3d3d;
+  --c-middle-black: #535353;
+  --c-middle-gray: #8c8c8c;
+  --c-light-gray: #bfbfbf;
+  --b-white: #ffffff;
 }
 
 body {
   font-family: var(--f1-family);
   font-size: var(--h5-size);
   line-height: 1.65;
-  color: #373f49;
-  background: #fafafa;
+  color: var(--c-base-black);
+  background: var(--b-white);
   margin: 0;
   overflow-x: hidden;
 }
