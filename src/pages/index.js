@@ -2,36 +2,27 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
-import Hero from '../components/hero'
-import Layout from '../components/layout'
-import ArticlePreview from '../components/article-preview'
+import * as styles from './index.module.css'
+import { Link } from 'gatsby'
+import topImage from '../images/topsnow.png'
 
 class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
-    // const [author] = get(this, 'props.data.allContentfulPerson.edges')
 
     return (
-      <Layout location={this.props.location}>
-        {/* <div style={{ background: '#fff' }}> */}
-        <div>
-          <Helmet title={siteTitle} />
-          {/* <Hero data={author.node} /> */}
-          <div className="wrapper">
-            <h2 className="section-headline">INDEX.JS</h2>
-            {/* <ul className="article-list">
-              {posts.map(({ node }) => {
-                return (
-                  <li key={node.slug}>
-                    <ArticlePreview article={node} />
-                  </li>
-                )
-              })}
-            </ul> */}
-          </div>
+      <div>
+        <Helmet title={siteTitle} />
+        <div
+          className={styles.screen}
+          style={{ backgroundImage: 'url(' + topImage + ')' }}
+        >
+          <h1 className="section-headline">
+            <Link to="/film/">Photograph</Link>
+          </h1>
         </div>
-      </Layout>
+      </div>
     )
   }
 }
