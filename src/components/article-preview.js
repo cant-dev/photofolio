@@ -27,7 +27,7 @@ export default ({ article }) => (
     </div>
     <div>
       <h3 className={styles.previewTitle}>
-        <Link to={`/blog/${article.slug}`}>{article.title}</Link>
+        <Link to={`/film/${article.slug}`}>{article.title}</Link>
       </h3>
     </div>
 
