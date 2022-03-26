@@ -6,6 +6,7 @@ import Layout from '../components/layout'
 
 import * as heroStyles from '../components/hero.module.css'
 import * as styles from './film-post.module.css'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
 class FilmPostTemplate extends React.Component {
   render() {
@@ -13,27 +14,27 @@ class FilmPostTemplate extends React.Component {
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
 
     return (
-      <Layout location={this.props.location}>
-        <div style={{ background: '#fff' }}>
+      <div>
+        <div className={styles.backLink}><div className={styles.backArrow}></div>back to index</div>
+        <div className={styles.screen}>
           <Helmet title={`${post.title} | ${siteTitle}`} />
-          <div className={heroStyles.hero}></div>
-          <div className="wrapper">
-            <h1 className="section-headline">{post.title}film</h1>
-            <p
-              style={{
-                display: 'block',
-              }}
-            >
-              {post.publishDate}
-            </p>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: post.body.childMarkdownRemark.html,
-              }}
-            />
+          <div className={styles.content}>
+            <div className={styles.turnButton}></div>
+            <div className={styles.centerContent}>
+              <div className={styles.borderBlock}>
+                <h2 className={styles.title}>{post.title}</h2>
+              </div>
+              <GatsbyImage image={post.heroImage.gatsbyImageData}/>
+              <div className={styles.borderBlock}>
+                <div className={styles.page}>
+                  2/10
+                </div>
+              </div>
+            </div>
+            <div className={styles.turnButton}></div>
           </div>
         </div>
-      </Layout>
+      </div>
     )
   }
 }
@@ -51,9 +52,12 @@ export const pageQuery = graphql`
       title
       publishDate(formatString: "MMMM Do, YYYY")
       heroImage {
-        fluid(maxWidth: 1180, background: "rgb:000000") {
-          ...GatsbyContentfulFluid_tracedSVG
-        }
+        gatsbyImageData(
+          layout: FULL_WIDTH
+          placeholder: BLURRED
+          # width: 424
+          # height: 212
+        )
       }
       body {
         childMarkdownRemark {

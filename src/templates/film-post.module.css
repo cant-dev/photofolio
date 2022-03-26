@@ -1,10 +1,67 @@
-.hero {
+.screen {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+}
 
-  height: 12.5em;
-  background: #e1e1e1;
-  margin: -1em -2.5em 1em;
-  font-size: 2em;
+.backLink {
+  position: absolute;
+  top: 4vw;
+  left: 4vw;
+  color: var(--b-gray200);
+  font-weight: 700;
+}
+.backArrow{
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+  border: 5px solid;
+  border-color:  transparent transparent var(--b-gray200) var(--b-gray200);
+  transform: rotate(45deg);
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.turnButton {
+  margin: 0 4vw;
+  width: 6vw;
+  height: 10vw;
+  border-radius: 60%;
+  background-color: var(--b-gray200);
+}
+
+.centerContent {
+  width: 70vw;
+}
+
+.borderBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1vw 0;
+}
+
+.borderBlock h2 {
+  margin: 0 1vw;
+  max-width: 50%;
+  font-size: var(--h5-size);
+}
+
+.borderBlock::after, .borderBlock::before {
+  content: "";
+  flex-grow: 1;
+  display: block;
+  border: 0.4px solid var(--c-base-black);
+}
+
+.page {
+  margin: 0 2vw;
 }

@@ -18,7 +18,7 @@ class RootIndex extends React.Component {
           className={styles.screen}
           style={{ backgroundImage: 'url(' + topImage + ')' }}
         >
-          <h1 className="">
+          <h1 className={styles.title}>
             <Link to="/film/">Photograph</Link>
           </h1>
         </div>

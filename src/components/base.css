@@ -20,13 +20,16 @@ font-family: 'IBM Plex Sans', sans-serif; helvitica*/
   --h5-size: 14rem;
   --h6-size: 12rem;
   --f1-family: 'Roboto', sans-serif;
-  --f2-family: 'Didact Gothic', sans-serif;
+  --f2-family: 'Didact Gothic', sans-serif; /* no weight */
   --f3-family: 'IBM Plex Sans', sans-serif;
   --c-base-black: #3d3d3d;
   --c-middle-black: #535353;
   --c-middle-gray: #8c8c8c;
   --c-light-gray: #bfbfbf;
   --b-white: #ffffff;
+  --b-gray100:#F8F8F8;
+  --b-gray200:#DCDCDC;
+  --b-gray300:#C4C4C4;
 }
 
 body {
