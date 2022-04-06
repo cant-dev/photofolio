@@ -27,7 +27,8 @@
 .content {
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  /* width: 100vw; */
 }
 
 .turnButton {
@@ -40,6 +41,7 @@
 
 .centerContent {
   width: 70vw;
+  max-width: 1080px;
 }
 
 .borderBlock {
@@ -62,6 +64,33 @@
   border: 0.4px solid var(--c-base-black);
 }
 
-.page {
+.pageNumber {
   margin: 0 2vw;
+}
+
+@media (max-width: 768px) {
+  .turnButton {
+    display: none;
+  }
+
+  .centerContent {
+    width: 90vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .gatsby-image-wrapper {
+    height: 50vh;
+  }
+  
+  .borderBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1vw 0;
+    height: 10vh;
+  }
 }

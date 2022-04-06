@@ -15,7 +15,9 @@ class FilmPostTemplate extends React.Component {
 
     return (
       <div>
-        <div className={styles.backLink}><div className={styles.backArrow}></div>back to index</div>
+        <div className={styles.backLink}>
+          <div className={styles.backArrow}></div>back to index
+        </div>
         <div className={styles.screen}>
           <Helmet title={`${post.title} | ${siteTitle}`} />
           <div className={styles.content}>
@@ -24,11 +26,9 @@ class FilmPostTemplate extends React.Component {
               <div className={styles.borderBlock}>
                 <h2 className={styles.title}>{post.title}</h2>
               </div>
-              <GatsbyImage image={post.heroImage.gatsbyImageData}/>
+              <GatsbyImage image={post.heroImage.gatsbyImageData} />
               <div className={styles.borderBlock}>
-                <div className={styles.page}>
-                  2/10
-                </div>
+                <div className={styles.pageNumber}>2/10</div>
               </div>
             </div>
             <div className={styles.turnButton}></div>
