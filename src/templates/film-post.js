@@ -26,7 +26,9 @@ class FilmPostTemplate extends React.Component {
               <div className={styles.borderBlock}>
                 <h2 className={styles.title}>{post.title}</h2>
               </div>
-              <GatsbyImage image={post.heroImage.gatsbyImageData} />
+              <div className={styles.imgBlock}>
+                <GatsbyImage image={post.heroImage.gatsbyImageData} />
+              </div>
               <div className={styles.borderBlock}>
                 <div className={styles.pageNumber}>2/10</div>
               </div>
