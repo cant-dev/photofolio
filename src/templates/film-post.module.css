@@ -10,9 +10,10 @@
 
 .backLink {
   position: absolute;
-  top: 4vw;
+  top: 10vw;
   left: 4vw;
   color: var(--b-gray200);
+  font-size: var(--h6-size);
   font-weight: 700;
 }
 .backArrow{
