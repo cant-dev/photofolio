@@ -10,7 +10,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 class FilmIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const posts = get(this, 'props.data.allContentfulBlogPost.edges')
+    const posts = get(this, 'props.data.allContentfulFilmPost.edges')
 
     return (
       <Layout location={this.props.location}>
@@ -44,25 +44,19 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+    allContentfulFilmPost(sort: { fields: [publishDate], order: DESC }) {
       edges {
         node {
           title
           slug
           publishDate(formatString: "YYYY MMMM")
-          tags
-          heroImage {
+          photos {
             gatsbyImageData(
               layout: FULL_WIDTH
               placeholder: BLURRED
               width: 424
               height: 212
             )
-          }
-          description {
-            childMarkdownRemark {
-              html
-            }
           }
         }
       }

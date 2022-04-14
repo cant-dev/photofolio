@@ -10,8 +10,8 @@
 
 .backLink {
   position: absolute;
-  top: 10vw;
-  left: 4vw;
+  top: 2vw;
+  left: 2vw;
   color: var(--b-gray200);
   font-size: var(--h6-size);
   font-weight: 700;
@@ -30,6 +30,7 @@
   justify-content: center;
   align-items: center;
   /* width: 100vw; */
+  margin: 8vw 8vw;
 }
 
 .turnButton {
@@ -45,8 +46,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  width: 70vw;
-  height: 100vh;
+  width: 60vw;
+  height: 84vh;
   max-width: 1080px;
 }
 

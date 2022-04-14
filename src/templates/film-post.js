@@ -10,9 +10,10 @@ import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
 class FilmPostTemplate extends React.Component {
   render() {
-    const post = get(this.props, 'data.contentfulBlogPost')
+    const post = get(this.props, 'data.contentfulFilmPost')
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
 
+    console.log(post.photos)
     return (
       <div>
         <div className={styles.backLink}>
@@ -27,7 +28,9 @@ class FilmPostTemplate extends React.Component {
                 <h2 className={styles.title}>{post.title}</h2>
               </div>
               <div className={styles.imgBlock}>
-                <GatsbyImage image={post.heroImage.gatsbyImageData} />
+                {post.photos.map((photo) => {
+                  return <GatsbyImage image={photo.gatsbyImageData} />
+                })}
               </div>
               <div className={styles.borderBlock}>
                 <div className={styles.pageNumber}>2/10</div>
@@ -50,21 +53,16 @@ export const pageQuery = graphql`
         title
       }
     }
-    contentfulBlogPost(slug: { eq: $slug }) {
+    contentfulFilmPost(slug: { eq: $slug }) {
       title
       publishDate(formatString: "MMMM Do, YYYY")
-      heroImage {
+      photos {
         gatsbyImageData(
           layout: FULL_WIDTH
           placeholder: BLURRED
           # width: 424
           # height: 212
         )
-      }
-      body {
-        childMarkdownRemark {
-          html
-        }
       }
     }
   }

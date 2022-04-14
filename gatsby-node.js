@@ -57,7 +57,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const filmResult = await graphql(
     `
       {
-        allContentfulBlogPost {
+        allContentfulFilmPost {
           nodes {
             title
             slug
@@ -75,7 +75,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const filmPosts = filmResult.data.allContentfulBlogPost.nodes
+  const filmPosts = filmResult.data.allContentfulFilmPost.nodes
 
   // Create blog posts pages
   // But only if there's at least one blog post found in Contentful
