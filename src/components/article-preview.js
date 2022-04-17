@@ -18,7 +18,7 @@ export default ({ article }) => (
         <GatsbyImage
           className=""
           alt=""
-          image={article.photos.gatsbyImageData}
+          image={article.photos[0].gatsbyImageData}
         />
       </div>
       <div className={styles.rightItem}>
