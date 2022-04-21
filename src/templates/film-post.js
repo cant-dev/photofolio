@@ -14,13 +14,37 @@ class FilmPostTemplate extends React.Component {
     this.state = {
       page: 0,
     };
+    this.post = get(this.props, 'data.contentfulFilmPost');
+    this.photoPageMax = this.post.photos.length;
   }
 
   rightButton = () => {
-    this.setState((state, props) => ({
-      page: state.page + 1
-    }));
+    this.turnPage(1);
     console.log("debug##page:", this.state.page);
+  }
+
+  leftButton = () => {
+    this.turnPage(-1);
+    console.log("debug##page:", this.state.page);
+  }
+
+  turnPage = (num) => {
+    console.log(this.photoPageMax, this.state);
+    this.setState((state, props) => ({
+      page: state.page + num
+    }));
+    if (this.state.page + num < 0) {
+      this.setState((state, props) => ({
+        page: this.photoPageMax - 1
+      }));
+    }
+    if (this.state.page + num >= this.photoPageMax) {
+      this.setState((state, props) => ({
+        page: 0
+      }));
+    }
+      
+    console.log(this.photoPageMax, this.state);
   }
 
   render() {
@@ -38,7 +62,7 @@ class FilmPostTemplate extends React.Component {
         <div className={styles.screen}>
           <Helmet title={`${post.title} | ${siteTitle}`} />
           <div className={styles.content}>
-            <div className={styles.turnButton} onClick={this.rightButton}></div>
+            <div className={styles.turnButton} onClick={this.leftButton}></div>
             <div className={styles.centerContent}>
               <div className={styles.borderBlock}>
                 <h2 className={styles.title}>{post.title}</h2>
@@ -50,10 +74,10 @@ class FilmPostTemplate extends React.Component {
                 {showingPhoto}
               </div>
               <div className={styles.borderBlock}>
-                <div className={styles.pageNumber}>2/10</div>
+                <div className={styles.pageNumber}>{this.state.page + 1}/{this.photoPageMax}</div>
               </div>
             </div>
-            <div className={styles.turnButton}></div>
+            <div className={styles.turnButton} onClick={this.rightButton}></div>
           </div>
         </div>
       </div>
