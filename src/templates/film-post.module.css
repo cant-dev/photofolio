@@ -1,4 +1,4 @@
-.screen {
+/* .screen {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,7 +6,34 @@
   height: 100vh;
   background-size: cover;
   background-position: center center;
+} */
+
+/* .screenWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+} */
+
+.screen {
+  position: relative;
+  width: 100%;
 }
+
+/* .screen::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+
+.screenInner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+} */
 
 .backLink {
   position: absolute;
@@ -54,10 +81,29 @@
 .imgBlock {
   position: relative;
   width: 100%;
+}
+
+.imgBlock::before {
+  content: "";
+  display: block;
+  padding-top: 66.66%;
+}
+
+.imgBlockInner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* .imgBlock {
+  position: relative;
+  width: 100%;
   overflow: hidden;
   flex-shrink: 1;
-}
-.imgBlock > div {
+} */
+.imgBlockInner > div {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

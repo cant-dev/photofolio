@@ -59,27 +59,33 @@ class FilmPostTemplate extends React.Component {
         <div className={styles.backLink}>
           <div className={styles.backArrow}></div>back to index
         </div>
-        <div className={styles.screen}>
-          <Helmet title={`${post.title} | ${siteTitle}`} />
-          <div className={styles.content}>
-            <div className={styles.turnButton} onClick={this.leftButton}></div>
-            <div className={styles.centerContent}>
-              <div className={styles.borderBlock}>
-                <h2 className={styles.title}>{post.title}</h2>
+        {/* <div className={styles.screenWrapper}> */}
+          <div className={styles.screen}>
+            {/* <div className={styles.screenInner}> */}
+              <Helmet title={`${post.title} | ${siteTitle}`} />
+              <div className={styles.content}>
+                <div className={styles.turnButton} onClick={this.leftButton}></div>
+                <div className={styles.centerContent}>
+                  <div className={styles.borderBlock}>
+                    <h2 className={styles.title}>{post.title}</h2>
+                  </div>
+                  <div className={styles.imgBlock}>
+                    <div className={styles.imgBlockInner}>
+                      {/* {post.photos.map((photo) => {
+                        return <GatsbyImage image={photo.gatsbyImageData} />
+                      })} */}
+                      {showingPhoto}
+                    </div>
+                  </div>
+                  <div className={styles.borderBlock}>
+                    <div className={styles.pageNumber}>{this.state.page + 1}/{this.photoPageMax}</div>
+                  </div>
+                </div>
+                <div className={styles.turnButton} onClick={this.rightButton}></div>
               </div>
-              <div className={styles.imgBlock}>
-                {/* {post.photos.map((photo) => {
-                  return <GatsbyImage image={photo.gatsbyImageData} />
-                })} */}
-                {showingPhoto}
-              </div>
-              <div className={styles.borderBlock}>
-                <div className={styles.pageNumber}>{this.state.page + 1}/{this.photoPageMax}</div>
-              </div>
-            </div>
-            <div className={styles.turnButton} onClick={this.rightButton}></div>
+            {/* </div> */}
           </div>
-        </div>
+        {/* </div> */}
       </div>
     )
   }
