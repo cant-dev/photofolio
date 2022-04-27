@@ -52,7 +52,11 @@ class FilmPostTemplate extends React.Component {
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
 
     let showingPhoto;
-    showingPhoto = <GatsbyImage image={post.photos[this.state.page].gatsbyImageData} />;
+    showingPhoto = <GatsbyImage 
+      image={post.photos[this.state.page].gatsbyImageData} 
+      style={{ height: "100%", width: "100%" }}
+      imgStyle={{ objectFit: "contain" }}
+    />;
 
     return (
       <div>
