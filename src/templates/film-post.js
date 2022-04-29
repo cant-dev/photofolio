@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import get from 'lodash/get'
 import Layout from '../components/layout'
+import { Link } from 'gatsby'
 
 import * as heroStyles from '../components/hero.module.css'
 import * as styles from './film-post.module.css'
@@ -60,9 +61,11 @@ class FilmPostTemplate extends React.Component {
 
     return (
       <div>
-        <div className={styles.backLink}>
-          <div className={styles.backArrow}></div>back to index
-        </div>
+        <Link to="/film">
+          <div className={styles.backLink}>
+            <div className={styles.backArrow}></div>back to index
+          </div>
+        </Link>
         {/* <div className={styles.screenWrapper}> */}
           <div className={styles.screen}>
             {/* <div className={styles.screenInner}> */}

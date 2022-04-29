@@ -14,23 +14,26 @@ export default ({ article }) => (
           <small>4</small>
         </div>
       </div>
+      <Link to={`/film/${article.slug}`}>
       <div className={styles.imgItem}>
-        <GatsbyImage
-          className=""
-          alt=""
-          image={article.photos[0].gatsbyImageData}
-        />
-      </div>
+          <GatsbyImage
+            className=""
+            alt=""
+            image={article.photos[0].gatsbyImageData}
+          />
+        </div>
+      </Link>
       <div className={styles.rightItem}>
         <small>{article.publishDate}</small>
       </div>
     </div>
     <div>
-      <h3 className={styles.previewTitle}>
-        <Link to={`/film/${article.slug}`}>{article.title}</Link>
-      </h3>
+      <Link to={`/film/${article.slug}`}>
+        <h3 className={styles.previewTitle}>
+          {article.title}
+        </h3>
+      </Link>
     </div>
-
     {/* description */}
     {/* <div
       dangerouslySetInnerHTML={{
