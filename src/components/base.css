@@ -19,9 +19,9 @@ font-family: 'IBM Plex Sans', sans-serif; helvitica*/
   --h4-size: 16rem;
   --h5-size: 14rem;
   --h6-size: 12rem;
-  --f1-family: 'Roboto', sans-serif;
+  --f1-family: 'Roboto', sans-serif; /* 400, 700 */
   --f2-family: 'Didact Gothic', sans-serif; /* no weight */
-  --f3-family: 'IBM Plex Sans', sans-serif;
+  --f3-family: 'IBM Plex Sans', sans-serif; /* 400, 700 */
   --c-base-black: #3d3d3d;
   --c-middle-black: #535353;
   --c-middle-gray: #8c8c8c;
@@ -103,9 +103,40 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
+  /* width: 100vw; */
 }
+
+.between-pattern {
+  flex-grow: 1;
+}
+
 
 .pattern-film {
   width: 240px;
   background: repeating-linear-gradient(transparent 0px, var(--b-gray100) 0px, var(--b-gray100) 240px, transparent 240px, transparent 280px);
+  flex-shrink: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.top-button-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--c-light-gray);
+  font-weight: 700;
+  height: 240px;
+}
+
+.up-forward-mark {
+  width: 20rem;
+  height: 20rem;
+  border: 5px solid;
+  border-color: var(--c-light-gray) var(--c-light-gray) transparent transparent;
+  transform: rotate(-45deg);
+}
+
+.top-text {
+  top: -20px;
 }
