@@ -1,10 +1,10 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
-import * as styles from './me.module.css'
-import { Link } from 'gatsby'
-import topImage from '../images/topsnow.png'
+import * as styles from './blog.module.css'
+import Layout from '../components/layout'
+import BlogTitleItem from '../components/blog-title-item'
 
 class Me extends React.Component {
   render() {
@@ -12,18 +12,14 @@ class Me extends React.Component {
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
 
     return (
-      <div>
-        <Helmet title={siteTitle} />
-        Me
-        <div
-          className={styles.screen}
-          style={{ backgroundImage: 'url(' + topImage + ')' }}
-        >
-          <h1 className={styles.title}>
-            <Link to="/film/">Photograph</Link>
-          </h1>
+      <Layout location={this.props.location}>
+        <div>
+          <Helmet title={siteTitle} />
+          <div>
+            <h4></h4>
+          </div>
         </div>
-      </div>
+      </Layout>
     )
   }
 }
@@ -31,7 +27,7 @@ class Me extends React.Component {
 export default Me
 
 export const pageQuery = graphql`
-  query HomeQuery2 {
+  query BlogIndexQuery2 {
     site {
       siteMetadata {
         title
@@ -42,7 +38,7 @@ export const pageQuery = graphql`
         node {
           title
           slug
-          publishDate(formatString: "MMMM Do, YYYY")
+          publishDate(formatString: "YYYY / M / DD ")
           tags
           heroImage {
             gatsbyImageData(
