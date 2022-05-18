@@ -2,9 +2,10 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
-import * as styles from './blog.module.css'
+import * as styles from './me.module.css'
 import Layout from '../components/layout'
 import BlogTitleItem from '../components/blog-title-item'
+import topImage from '../images/topsnow.png'
 
 class Me extends React.Component {
   render() {
@@ -16,7 +17,47 @@ class Me extends React.Component {
         <div>
           <Helmet title={siteTitle} />
           <div>
-            <h4></h4>
+            <div
+              className={styles.bioImg}
+              style={{ backgroundImage: 'url(' + topImage + ')' }}
+            ></div>
+            <small>Bio</small>
+            <h2>Name</h2>
+            <small>199X | City / City</small>
+            <div>introduction</div>
+            <div>
+              <small>Job</small>
+              <h3>Example Job</h3>
+            </div>
+            <div>
+              <small>Member of</small>
+              <h3>One company</h3>
+            </div>
+            <div>
+              <small>Work history</small>
+              <ul>
+                <li>
+                  <span>20xx-20xx:</span>one history
+                </li>
+                <li>
+                  <span>20xx-20xx:</span>one history
+                </li>
+                <li>
+                  <span>20xx-20xx:</span>one history
+                </li>
+              </ul>
+            </div>
+            <div>
+              <small>Educated</small>
+              <ul>
+                <li>
+                  <span>20xx-20xx:</span>one history
+                </li>
+                <li>
+                  <span>20xx-20xx:</span>one history
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </Layout>

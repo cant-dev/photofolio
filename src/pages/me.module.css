@@ -1,10 +1,5 @@
-.blog-index-wrapper {
-    width: 70%;
-    margin: 0 auto;
-}
-
-.article-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.bioImg {
+    height: 400px;
+    background-size: cover;
+    background-position: center center;
 }
