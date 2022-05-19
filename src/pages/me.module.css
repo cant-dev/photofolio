@@ -1,5 +1,58 @@
+
+.mePage {
+    width: 80%;
+    max-width: 720px;
+    margin: auto;
+    padding-bottom: 120px;
+    font-size: 24px;
+}
+
+.mePage small{
+    display: block;
+    margin-top: 36px;
+    color: var(--c-middle-gray);
+    font-family: var(--f1-family);
+    font-weight: 700;
+    line-height: 100%;
+    font-size: 24px;
+}
+
+.mePage h2 {
+    font-family: var(--f3-family);
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 90%;
+    margin: 0;
+}
+
+.mePage h3 {
+    color: var(--c-middle-black);
+    font-family: var(--f3-family);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 90%;
+    margin: 0;
+}
+
 .bioImg {
     height: 400px;
     background-size: cover;
     background-position: center center;
 }
+
+.mePage small.primaryWord {
+    display: block;
+    margin-top: 40px;
+    font-size: 32px;
+}
+
+.mePage small.addtionalWord{
+    display: block;
+    margin-top: 0px;
+    font-size: 24px;
+}
+
+.introduction {
+    margin-top: 28px;
+}
+

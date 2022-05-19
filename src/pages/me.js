@@ -16,15 +16,21 @@ class Me extends React.Component {
       <Layout location={this.props.location}>
         <div>
           <Helmet title={siteTitle} />
-          <div>
+          <div className={styles.mePage}>
             <div
               className={styles.bioImg}
               style={{ backgroundImage: 'url(' + topImage + ')' }}
             ></div>
-            <small>Bio</small>
+            <small className={styles.primaryWord}>Bio</small>
             <h2>Name</h2>
-            <small>199X | City / City</small>
-            <div>introduction</div>
+            <small className={styles.addtionalWord}>199X | City / City</small>
+            <div className={styles.introduction}>
+              introduction
+              背景は平安時代。飢饉や辻風（竜巻）などの天変地異が打ち続き、都は衰微していた。
+              ある暮れ方、荒廃した羅生門の下で若い下人が途方に暮れていた。下人は数日前、仕えていた主人から解雇された。
+              生活の糧を得る術も無い彼は、いっそこのまま盗賊になろうかと思いつめるが、
+              どうしても「勇気」が出ない。下人は羅生門の2階が寝床にならないかと考え、上へ昇ってみた。
+            </div>
             <div>
               <small>Job</small>
               <h3>Example Job</h3>

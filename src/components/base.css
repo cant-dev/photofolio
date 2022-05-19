@@ -59,6 +59,14 @@ a {
   text-decoration: none;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+
 .wrapper {
   width: calc(100% - 10vmin);
   margin: 0 auto;
