@@ -11,10 +11,16 @@
 
 .patternFilm {
   width: 240px;
+  min-width: 120px;
   background: repeating-linear-gradient(transparent 0px, var(--b-gray100) 0px, var(--b-gray100) 240px, transparent 240px, transparent 280px);
   flex-shrink: 1;
   display: flex;
   justify-content: center;
+}
+@media (max-width: 768px) {
+  .patternFilm {
+    display: none;
+  }
 }
 
 .topButtonBlock {

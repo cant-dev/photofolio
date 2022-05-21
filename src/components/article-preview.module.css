@@ -1,6 +1,7 @@
 :root {
-  --article-img-width: 90vmin;
-  --article-img-height: 60vmin;
+  --article-img-width: 64vw;
+  --article-img-height: 42.66vw;
+  overflow-x: hidden;
 }
 
 .previewTitle {
@@ -20,8 +21,7 @@
   justify-content: center;
   align-items: center;
 }
-.imgItem {
-  /* flex-grow: 1; */
+/* .imgItem {
   width: var(--article-img-width);
   height: var(--article-img-height);
   overflow: hidden;
@@ -30,7 +30,27 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+} */
+
+.imgItem {
+  position: relative;
+  width: var(--article-img-width);
 }
+
+.imgItem::before {
+  content: "";
+  display: block;
+  padding-top: 66.66%;
+}
+
+.imgItemInner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 .leftItem,
 .rightItem {
   width: 32px;

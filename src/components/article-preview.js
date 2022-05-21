@@ -15,12 +15,16 @@ export default ({ article }) => (
         </div>
       </div>
       <Link to={`/film/${article.slug}`}>
-      <div className={styles.imgItem}>
-          <GatsbyImage
-            className=""
-            alt=""
-            image={article.photos[0].gatsbyImageData}
-          />
+        <div className={styles.imgItem}>
+          <div className={styles.imgItemInner}>
+            <GatsbyImage
+              className=""
+              alt=""
+              image={article.photos[0].gatsbyImageData}
+              style={{ height: "100%", width: "100%" }}
+              imgStyle={{ objectFit: "contain" }}
+            />
+          </div>
         </div>
       </Link>
       <div className={styles.rightItem}>
