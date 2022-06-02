@@ -36,8 +36,8 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Contentful Starter',
-    description: 'Official Contentful Gatsby Starter',
+    title: 'Photofolio',
+    description: '写真家のポートフォリオサイト',
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
