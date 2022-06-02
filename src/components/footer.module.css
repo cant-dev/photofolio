@@ -1,0 +1,25 @@
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 160px;
+  margin-bottom: 56px;
+  width: 100%;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.partition {
+  display: block;
+  width: 4px;
+  height: 48px;
+  background-color: var(--c-base-black);
+  /* border-left: 4px solid var(--c-base-black); */
+  content: "";
+}
+
+.item {
+  padding: 0 64px;
+  text-align: center;
+}
