@@ -21,8 +21,8 @@ export default ({ article }) => (
               className=""
               alt=""
               image={article.photos[0].gatsbyImageData}
-              style={{ height: "100%", width: "100%" }}
-              imgStyle={{ objectFit: "contain" }}
+              style={{ height: '100%', width: '100%' }}
+              imgStyle={{ objectFit: 'contain' }}
             />
           </div>
         </div>
@@ -33,9 +33,7 @@ export default ({ article }) => (
     </div>
     <div>
       <Link to={`/film/${article.slug}`}>
-        <h3 className={styles.previewTitle}>
-          {article.title}
-        </h3>
+        <h3 className={styles.previewTitle}>{article.title}</h3>
       </Link>
     </div>
     {/* description */}
