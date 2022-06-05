@@ -5,7 +5,7 @@ import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
 import * as styles from './article-preview.module.css'
 
-export default ({ article }) => (
+export default ({ article, articleNumber }) => (
   <div className={styles.preview}>
     <div className={styles.headBlock}>
       <div className={styles.leftItem}>
@@ -31,7 +31,8 @@ export default ({ article }) => (
         <div>
           <div className={styles.imgSideItemSpacer}></div>
           <small>
-            4 <span className={styles.triangleMark}></span>
+            {articleNumber}
+            <span className={styles.triangleMark}></span>
           </small>
           <small>{article.publishDate}</small>
         </div>

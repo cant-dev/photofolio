@@ -11,6 +11,7 @@ class FilmIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allContentfulFilmPost.edges')
+    const postsLength = posts.length
 
     return (
       <Layout location={this.props.location}>
@@ -20,10 +21,13 @@ class FilmIndex extends React.Component {
           <div className="wrapper">
             {/* <h2 className="section-headline">Recent articles</h2> */}
             <ul className="article-list">
-              {posts.map(({ node }) => {
+              {posts.map(({ node }, index) => {
                 return (
                   <li key={node.slug}>
-                    <ArticlePreview article={node} />
+                    <ArticlePreview
+                      article={node}
+                      articleNumber={postsLength - index}
+                    />
                   </li>
                 )
               })}
@@ -47,6 +51,7 @@ export const pageQuery = graphql`
     allContentfulFilmPost(sort: { fields: [publishDate], order: DESC }) {
       edges {
         node {
+          id
           title
           slug
           publishDate(formatString: "YYYY MMMM")
