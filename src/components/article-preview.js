@@ -27,8 +27,14 @@ export default ({ article }) => (
           </div>
         </div>
       </Link>
-      <div className={styles.rightItem}>
-        <small>{article.publishDate}</small>
+      <div className={styles.leftItem}>
+        <div>
+          <div className={styles.imgSideItemSpacer}></div>
+          <small>
+            4 <span className={styles.triangleMark}></span>
+          </small>
+          <small>{article.publishDate}</small>
+        </div>
       </div>
     </div>
     <div>
