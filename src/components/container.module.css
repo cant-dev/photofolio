@@ -12,7 +12,13 @@
 .patternFilm {
   width: 240px;
   min-width: 120px;
-  background: repeating-linear-gradient(transparent 0px, var(--b-gray100) 0px, var(--b-gray100) 240px, transparent 240px, transparent 280px);
+  background: repeating-linear-gradient(
+    transparent 0px,
+    var(--b-gray100) 0px,
+    var(--b-gray100) 240px,
+    transparent 240px,
+    transparent 280px
+  );
   flex-shrink: 1;
   display: flex;
   justify-content: center;
@@ -24,6 +30,7 @@
 }
 
 .topButtonBlock {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,16 +38,19 @@
   color: var(--c-light-gray);
   font-weight: 700;
   height: 240px;
+  font-size: 16rem;
 }
 
 .upForwardMark {
-  width: 20rem;
-  height: 20rem;
-  border: 5px solid;
+  flex-shrink: 1;
+  width: 16rem;
+  height: 16rem;
+  border: 4rem solid;
   border-color: var(--c-light-gray) var(--c-light-gray) transparent transparent;
   transform: rotate(-45deg);
 }
 
 .topText {
-  top: -20px;
+  /* position: absolute; */
+  top: 0;
 }
