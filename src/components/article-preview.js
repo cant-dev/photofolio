@@ -11,7 +11,7 @@ export default ({ article, articleNumber }) => (
       <div className={styles.leftItem}>
         <div>
           <small></small>
-          <small>Kodak ULTRAMAX400</small>
+          <small>{article.camera}</small>
         </div>
       </div>
       <Link to={`/film/${article.slug}`}>

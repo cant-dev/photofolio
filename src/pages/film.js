@@ -55,6 +55,7 @@ export const pageQuery = graphql`
           title
           slug
           publishDate(formatString: "YYYY MMMM")
+          camera
           photos {
             gatsbyImageData(
               layout: FULL_WIDTH
