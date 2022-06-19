@@ -36,7 +36,7 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: 'Photofolio',
+    title: process.env.SITE_TITLE,
     description: '写真家のポートフォリオサイト',
   },
   pathPrefix: '/gatsby-contentful-starter',

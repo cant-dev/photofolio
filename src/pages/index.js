@@ -13,10 +13,11 @@ class RootIndex extends React.Component {
     const postIndexRandom = Math.floor( Math.random() * filmPosts.length )
     const postRandom = filmPosts[postIndexRandom]
     const photoIndexRandom = Math.floor( Math.random() * postRandom['node']['photos'].length )
-    console.log(photoIndexRandom, postRandom['node']['photos'].length)
     const photoSrc = postRandom['node']['photos'][photoIndexRandom]['gatsbyImageData']['images']['fallback']['src']
 
     const latestPostPhotoSrc = filmPosts[0]['node']['photos'][0]['gatsbyImageData']['images']['fallback']['src']
+
+    const topPageWord = process.env.TOP_PAGE_WORD
     
     return (
       <div>
@@ -26,7 +27,7 @@ class RootIndex extends React.Component {
           style={{ backgroundImage: 'url(' + photoSrc  + ')' }}
         >
           <h1 className={styles.title}>
-            <Link to="/film/">Photograph</Link>
+            <Link to="/film/">{topPageWord}</Link>
           </h1>
         </div>
       </div>

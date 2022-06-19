@@ -1,3 +1,11 @@
+### 環境変数
+- CONTENTFUL_SPACE_ID=
+- CONTENTFUL_ACCESS_TOKEN=
+- TOP_PAGE_WORD=
+- SITE_TITLE=
+
+
+## 以下、Gatsby Contentful StarterのReadMe
 ## はじめに
 
 [Contentful公式スタートガイド](https://www.contentful.com/developers/docs/tutorials/general/get-started/)をご覧ください。
