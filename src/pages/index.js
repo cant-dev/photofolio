@@ -10,6 +10,12 @@ class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const filmPosts = get(this, 'props.data.allContentfulFilmPost.edges')
+    const postIndexRandom = Math.floor( Math.random() * filmPosts.length )
+    const postRandom = filmPosts[postIndexRandom]
+    const photoIndexRandom = Math.floor( Math.random() * postRandom['node']['photos'].length )
+    console.log(photoIndexRandom, postRandom['node']['photos'].length)
+    const photoSrc = postRandom['node']['photos'][photoIndexRandom]['gatsbyImageData']['images']['fallback']['src']
+
     const latestPostPhotoSrc = filmPosts[0]['node']['photos'][0]['gatsbyImageData']['images']['fallback']['src']
     
     return (
@@ -17,7 +23,7 @@ class RootIndex extends React.Component {
         <Helmet title={siteTitle} />
         <div
           className={styles.screen}
-          style={{ backgroundImage: 'url(' + latestPostPhotoSrc + ')' }}
+          style={{ backgroundImage: 'url(' + photoSrc  + ')' }}
         >
           <h1 className={styles.title}>
             <Link to="/film/">Photograph</Link>
