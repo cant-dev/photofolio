@@ -9,14 +9,15 @@ import topImage from '../images/topsnow.png'
 class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const posts = get(this, 'props.data.allContentfulBlogPost.edges')
-
+    const filmPosts = get(this, 'props.data.allContentfulFilmPost.edges')
+    const latestPostPhotoSrc = filmPosts[0]['node']['photos'][0]['gatsbyImageData']['images']['fallback']['src']
+    
     return (
       <div>
         <Helmet title={siteTitle} />
         <div
           className={styles.screen}
-          style={{ backgroundImage: 'url(' + topImage + ')' }}
+          style={{ backgroundImage: 'url(' + latestPostPhotoSrc + ')' }}
         >
           <h1 className={styles.title}>
             <Link to="/film/">Photograph</Link>
@@ -36,25 +37,18 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+    allContentfulFilmPost(sort: { fields: [publishDate], order: DESC }) {
       edges {
         node {
+          id
           title
           slug
-          publishDate(formatString: "MMMM Do, YYYY")
-          tags
-          heroImage {
+          publishDate(formatString: "YYYY MMMM")
+          photos {
             gatsbyImageData(
               layout: FULL_WIDTH
               placeholder: BLURRED
-              width: 424
-              height: 212
             )
-          }
-          description {
-            childMarkdownRemark {
-              html
-            }
           }
         }
       }
