@@ -17,7 +17,7 @@ class RootIndex extends React.Component {
 
     const latestPostPhotoSrc = filmPosts[0]['node']['photos'][0]['gatsbyImageData']['images']['fallback']['src']
 
-    const topPageWord = process.env.TOP_PAGE_WORD ? process.env.TOP_PAGE_WORD : 'Photograph'
+    const topPageWord = process.env.TOP_PAGE_WORD || 'Photograph'
     
     return (
       <div>
