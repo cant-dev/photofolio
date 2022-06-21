@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet'
 import * as styles from './index.module.css'
 import { Link } from 'gatsby'
 import topImage from '../images/topsnow.png'
+import { Content } from '../components/content'
 
 class RootIndex extends React.Component {
   render() {
@@ -15,19 +16,15 @@ class RootIndex extends React.Component {
     const photoIndexRandom = Math.floor( Math.random() * postRandom['node']['photos'].length )
     const photoSrc = postRandom['node']['photos'][photoIndexRandom]['gatsbyImageData']['images']['fallback']['src']
 
-    const latestPostPhotoSrc = filmPosts[0]['node']['photos'][0]['gatsbyImageData']['images']['fallback']['src']
-
-    const topPageWord = process.env.TOP_PAGE_WORD || 'Photograph'
-    
     return (
       <div>
         <Helmet title={siteTitle} />
         <div
           className={styles.screen}
-          style={{ backgroundImage: 'url(' + photoSrc  + ')' }}
+          style={{ backgroundImage: 'url(' + photoSrc + ')' }}
         >
           <h1 className={styles.title}>
-            <Link to="/film/">{topPageWord}</Link>
+            <Link to="/film/">{Content.topPageWord}</Link>
           </h1>
         </div>
       </div>
@@ -52,10 +49,7 @@ export const pageQuery = graphql`
           slug
           publishDate(formatString: "YYYY MMMM")
           photos {
-            gatsbyImageData(
-              layout: FULL_WIDTH
-              placeholder: BLURRED
-            )
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
           }
         }
       }

@@ -51,5 +51,11 @@ module.exports = {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
     },
+    // {
+    //   resolve: `gatsby-plugin-env-variables`,
+    //   options: {
+    //     allowList: ['MY_VAR', 'MY_OTHER_VAR'],
+    //   },
+    // },
   ],
 }
