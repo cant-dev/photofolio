@@ -6,10 +6,13 @@
 }
 
 .previewTitle {
-  margin-top: 4px;
-  margin-bottom: 64px;
-  font-size: 1em;
+  margin-top: 8rem;
+  margin-bottom: 40rem;
+  font-size: 1.3em;
   text-align: center;
+  /* font-family: 'IBM Plex Sans', sans-serif; */
+  font-weight: 700;
+  color: var(--c-middle-black);
 }
 
 .preview {

@@ -5,7 +5,7 @@
   margin-top: 160px;
   margin-bottom: 56px;
   width: 100%;
-  font-size: 24rem;
+  font-size: 20rem;
   font-weight: 700;
 }
 
@@ -19,6 +19,7 @@
 }
 
 .item {
-  padding: 0 64px;
+  padding: 0;
+  width: 160rem;
   text-align: center;
 }
