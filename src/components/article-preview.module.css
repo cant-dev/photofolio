@@ -4,6 +4,12 @@
   --side-w: 22rem;
   overflow-x: hidden;
 }
+@media (max-width: 768px) {
+  :root {
+    --article-img-width: 84vw;
+    --article-img-height: 56vw;
+  }
+}
 
 .previewTitle {
   margin-top: 8rem;

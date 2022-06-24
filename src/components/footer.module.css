@@ -8,11 +8,16 @@
   font-size: 20rem;
   font-weight: 700;
 }
+@media (max-width: 768px) {
+  .footer {
+    margin-bottom: 8px;
+  }
+}
 
 .partition {
   display: block;
-  width: 4px;
-  height: 48px;
+  width: 3.2rem;
+  height: 40rem;
   background-color: var(--c-base-black);
   /* border-left: 4px solid var(--c-base-black); */
   content: '';
