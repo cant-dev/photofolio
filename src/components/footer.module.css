@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 160px;
+  margin-top: 200rem;
   margin-bottom: 56px;
   width: 100%;
   font-size: 20rem;
@@ -27,4 +27,13 @@
   padding: 0;
   width: 160rem;
   text-align: center;
+}
+
+.item:nth-child(1) {
+  text-align: right;
+  padding-right: 40rem;
+}
+.item:nth-child(3) {
+  text-align: left;
+  padding-left: 40rem;
 }

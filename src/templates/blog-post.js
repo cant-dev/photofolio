@@ -63,11 +63,6 @@ class BlogPostTemplate extends React.Component {
             >
               {post.publishDate}
             </p>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: post.body.childMarkdownRemark.html,
-              }}
-            />
             {post.bodyRichText && renderRichText(post.bodyRichText, options)}
           </div>
         </div>
@@ -88,16 +83,6 @@ export const pageQuery = graphql`
     contentfulBlogPost(slug: { eq: $slug }) {
       title
       publishDate(formatString: "MMMM Do, YYYY")
-      heroImage {
-        fluid(maxWidth: 1180, background: "rgb:000000") {
-          ...GatsbyContentfulFluid_tracedSVG
-        }
-      }
-      body {
-        childMarkdownRemark {
-          html
-        }
-      }
       bodyRichText {
         raw
         references {

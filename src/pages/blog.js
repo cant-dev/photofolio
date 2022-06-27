@@ -49,19 +49,6 @@ export const pageQuery = graphql`
           slug
           publishDate(formatString: "YYYY / M / DD ")
           tags
-          heroImage {
-            gatsbyImageData(
-              layout: FULL_WIDTH
-              placeholder: BLURRED
-              width: 424
-              height: 212
-            )
-          }
-          description {
-            childMarkdownRemark {
-              html
-            }
-          }
         }
       }
     }
