@@ -49,7 +49,7 @@ export const pageQuery = graphql`
           slug
           publishDate(formatString: "YYYY MMMM")
           photos {
-            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+            gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
           }
         }
       }
