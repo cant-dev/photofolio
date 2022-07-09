@@ -74,7 +74,7 @@ class Me extends React.Component {
 export default Me
 
 export const pageQuery = graphql`
-  query BlogIndexQuery2 {
+  query MePageQuery {
     site {
       siteMetadata {
         title
