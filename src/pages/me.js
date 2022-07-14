@@ -22,45 +22,42 @@ class Me extends React.Component {
               style={{ backgroundImage: 'url(' + topImage + ')' }}
             ></div>
             <small className={styles.primaryWord}>Bio</small>
-            <h2>Name</h2>
-            <small className={styles.addtionalWord}>199X | City / City</small>
+            <h2>Yasuhiro Ono</h2>
+            {/* <small className={styles.addtionalWord}>199X | City / City</small> */}
             <div className={styles.introduction}>
-              introduction
-              背景は平安時代。飢饉や辻風（竜巻）などの天変地異が打ち続き、都は衰微していた。
-              ある暮れ方、荒廃した羅生門の下で若い下人が途方に暮れていた。下人は数日前、仕えていた主人から解雇された。
-              生活の糧を得る術も無い彼は、いっそこのまま盗賊になろうかと思いつめるが、
-              どうしても「勇気」が出ない。下人は羅生門の2階が寝床にならないかと考え、上へ昇ってみた。
+              1996年生まれ 福岡県太宰府市出身
+              人間が、心地良いと感じることに執着があります。
+              良い体験を考えることが好きで、面白いアイデア・企画などあれば巻き込んで頂けると嬉しいです。
+              できること / レジュメは こちら
+              趣味で真剣に写真撮影の活動をしています。プロフィール写真から作撮まで、交通費だけで受けます。
+              お気軽にSNSからご連絡を貰えると、喜びます。
             </div>
             <div>
               <small>Job</small>
-              <h3>Example Job</h3>
+              <h3>Design Reseacher</h3>
             </div>
-            <div>
-              <small>Member of</small>
-              <h3>One company</h3>
-            </div>
-            <div>
+            <div className={styles.historyList}>
               <small>Work history</small>
               <ul>
                 <li>
-                  <span>20xx-20xx:</span>one history
+                  <span>2021 - now </span>パーソルキャリア株式会社
                 </li>
                 <li>
-                  <span>20xx-20xx:</span>one history
+                  <span>2019 - 2021 </span>株式会社 tsumug
                 </li>
                 <li>
-                  <span>20xx-20xx:</span>one history
+                  <span>2018 - 2019 </span>西日本シティ銀行
                 </li>
               </ul>
             </div>
-            <div>
+            <div className={styles.historyList}>
               <small>Educated</small>
               <ul>
                 <li>
-                  <span>20xx-20xx:</span>one history
+                  <span>2011 - 2014 </span>福岡県立太宰府高等学校
                 </li>
                 <li>
-                  <span>20xx-20xx:</span>one history
+                  <span>2014 - 2018 </span>明治大学
                 </li>
               </ul>
             </div>
@@ -74,34 +71,32 @@ class Me extends React.Component {
 export default Me
 
 export const pageQuery = graphql`
-  query BlogIndexQuery2 {
+  query MePageQuery {
     site {
       siteMetadata {
         title
       }
     }
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
-      edges {
-        node {
-          title
-          slug
-          publishDate(formatString: "YYYY / M / DD ")
-          tags
-          heroImage {
-            gatsbyImageData(
-              layout: FULL_WIDTH
-              placeholder: BLURRED
-              width: 424
-              height: 212
-            )
-          }
-          description {
-            childMarkdownRemark {
-              html
-            }
-          }
-        }
-      }
-    }
+    # allContentfulAbout {
+    #   edges {
+    #     node {
+    #       educated {
+    #         data
+    #       }
+    #       job
+    #       name
+    #       sns {
+    #         data {
+    #         }
+    #       }
+    #       profile {
+    #         raw
+    #       }
+    #       workHistory {
+    #         data
+    #       }
+    #     }
+    #   }
+    # }
   }
 `
