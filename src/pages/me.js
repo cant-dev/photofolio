@@ -17,10 +17,13 @@ class Me extends React.Component {
         <div>
           <Helmet title={siteTitle} />
           <div className={styles.mePage}>
-            <div
-              className={styles.bioImg}
-              style={{ backgroundImage: 'url(' + topImage + ')' }}
-            ></div>
+            <div className={styles.bioImg}>
+              <div
+                className={styles.bioImgInner}
+                style={{ backgroundImage: 'url(' + topImage + ')' }}
+              ></div>
+            </div>
+
             <small className={styles.primaryWord}>Bio</small>
             <h2>Yasuhiro Ono</h2>
             {/* <small className={styles.addtionalWord}>199X | City / City</small> */}
