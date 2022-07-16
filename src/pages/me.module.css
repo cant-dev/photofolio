@@ -4,7 +4,7 @@
     max-width: 720px;
     margin: auto;
     padding: 0 4%;
-    padding-bottom: 120px;
+    /* padding-bottom: 120px; */
     font-size: 16px;
 }
 
@@ -77,6 +77,23 @@
 }
 
 @media (max-width: 768px) {
+    .mePage small.primaryWord {
+        font-size: 16px;
+    }
+    .mePage small {
+        font-size: 12px;
+    }
 
+    .mePage h2 {
+        font-size: 24px;
+    }
+    .historyList {
+        font-size: 16px;
+    }
 }
 
+.linkText {
+    /* text-decoration: underline; */
+    padding: 0;
+    border-bottom: 1px solid var(--c-middle-gray);
+}
