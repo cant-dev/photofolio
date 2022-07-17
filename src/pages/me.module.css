@@ -11,6 +11,7 @@
 .mePage small{
     display: block;
     margin-top: 36px;
+    margin-bottom: 8px;
     color: var(--c-middle-gray);
     font-family: var(--f1-family);
     font-weight: 700;
@@ -20,6 +21,7 @@
 
 .mePage h2 {
     font-family: var(--f3-family);
+    font-style: italic;
     font-weight: 700;
     font-size: 48px;
     line-height: 100%;
