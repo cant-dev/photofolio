@@ -88,6 +88,15 @@ export const pageQuery = graphql`
         title
       }
     }
+    allContentfulAbout {
+      edges {
+        node {
+          profileImage {
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+          }
+        }
+      }
+    }
     # allContentfulAbout {
     #   edges {
     #     node {
