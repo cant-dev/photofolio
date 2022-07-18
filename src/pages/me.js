@@ -6,24 +6,29 @@ import * as styles from './me.module.css'
 import Layout from '../components/layout'
 import BlogTitleItem from '../components/blog-title-item'
 import topImage from '../images/topsnow.png'
+import { GatsbyImage} from 'gatsby-plugin-image'
 
 class Me extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const posts = get(this, 'props.data.allContentfulBlogPost.edges')
+    const aboutContent = get(this, 'props.data.allContentfulAbout.edges')
+
+    const profileImage = aboutContent[0].node.profileImage;
+
+    console.log(aboutContent, aboutContent[0].node.profileImage)
 
     return (
       <Layout location={this.props.location}>
         <div>
           <Helmet title={siteTitle} />
           <div className={styles.mePage}>
-            <div className={styles.bioImg}>
-              <div
-                className={styles.bioImgInner}
-                style={{ backgroundImage: 'url(' + topImage + ')' }}
-              ></div>
-            </div>
-
+            <GatsbyImage
+              className=""
+              alt=""
+              image={profileImage.gatsbyImageData}
+              style={{ height: '540px' }}
+              imgStyle={{ objectFit: 'contain' }}
+            />
             <small className={styles.primaryWord}>Bio</small>
             <h2>Yasuhiro Ono</h2>
             {/* <small className={styles.addtionalWord}>199X | City / City</small> */}
@@ -97,26 +102,5 @@ export const pageQuery = graphql`
         }
       }
     }
-    # allContentfulAbout {
-    #   edges {
-    #     node {
-    #       educated {
-    #         data
-    #       }
-    #       job
-    #       name
-    #       sns {
-    #         data {
-    #         }
-    #       }
-    #       profile {
-    #         raw
-    #       }
-    #       workHistory {
-    #         data
-    #       }
-    #     }
-    #   }
-    # }
   }
 `
