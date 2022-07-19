@@ -10,14 +10,15 @@
 }
 
 .patternFilm {
-  width: 240px;
-  min-width: 120px;
+  --pattern-width: 16vw;
+  width: var(--pattern-width);
+  /* min-width: 120px; */
   background: repeating-linear-gradient(
     transparent 0px,
     var(--b-gray100) 0px,
-    var(--b-gray100) 240px,
-    transparent 240px,
-    transparent 280px
+    var(--b-gray100) var(--pattern-width),
+    transparent var(--pattern-width),
+    transparent calc(var(--pattern-width) * 1.16)
   );
   flex-shrink: 1;
   display: flex;
