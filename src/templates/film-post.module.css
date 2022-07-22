@@ -51,6 +51,7 @@
 }
 
 .imgBlock {
+  flex-grow: 1;
   position: relative;
   width: 100%;
 }
@@ -105,13 +106,31 @@
   margin: 0 2vw;
 }
 
+.turnButtonSpBlock {
+  display: none;
+  justify-content: space-between;
+  margin: 4vw 0;
+}
+
+.turnButtonSp {
+  margin: 0 4vw;
+  width: 16vw;
+  height: 16vw;
+  border-radius: 60%;
+  background-color: var(--b-gray200);
+}
+
 @media (max-width: 768px) {
   .turnButton {
     display: none;
   }
 
+  .content {
+    /* margin: 0 40px; */
+  }
+
   .centerContent {
-    width: 100vw;
+    width: 90vw;
     justify-content: space-around;
   }
   
@@ -124,7 +143,14 @@
     height: 10vh; 
     */
   }
+
+  .turnButtonSpBlock {
+    display: flex;
+  }
 }
+
+
+
 
 
 /* //memo */
