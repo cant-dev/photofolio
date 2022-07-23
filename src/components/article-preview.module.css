@@ -1,6 +1,6 @@
 :root {
-  --article-img-width: 64vw;
-  --article-img-height: 42.66vw;
+  --article-img-width: 60vw;
+  --article-img-height: 40vw;
   --side-w: 22rem;
   overflow-x: hidden;
 }

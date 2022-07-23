@@ -20,3 +20,11 @@
 .navigationItem a {
   color: currentColor;
 }
+
+@media (max-width: 768px) {
+  .navigation {
+    margin: 2vmin 4vmin;
+    justify-content: space-between;
+    font-size: var(--h1-size);
+  }
+}

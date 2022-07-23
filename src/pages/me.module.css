@@ -1,15 +1,17 @@
 
 .mePage {
-    max-width: 80%;
-    width: 720px;
+    /* max-width: 80%; */
+    max-width: 720px;
     margin: auto;
-    padding-bottom: 120px;
-    font-size: 24px;
+    padding: 0 4%;
+    /* padding-bottom: 120px; */
+    font-size: 16px;
 }
 
 .mePage small{
     display: block;
     margin-top: 36px;
+    margin-bottom: 8px;
     color: var(--c-middle-gray);
     font-family: var(--f1-family);
     font-weight: 700;
@@ -19,6 +21,7 @@
 
 .mePage h2 {
     font-family: var(--f3-family);
+    font-style: italic;
     font-weight: 700;
     font-size: 48px;
     line-height: 100%;
@@ -26,19 +29,34 @@
 }
 
 .mePage h3 {
-    color: var(--c-middle-black);
-    font-family: var(--f3-family);
-    font-weight: 700;
-    font-size: 40px;
+    /* color: var(--c-middle-black); */
+    /* font-family: var(--f3-family); */
+    /* font-weight: 700; */
+    font-size: 24px;
     line-height: 100%;
     margin: 0;
 }
 
-.bioImg {
-    height: 400px;
+/* .bioImg {
+    position: relative;
+    width: 100%;
+}
+
+.bioImg::before {
+    content: "";
+    display: block;
+    padding-top: 66.66%;
+}
+
+.bioImgInner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background-size: cover;
     background-position: center center;
-}
+} */
 
 .mePage small.primaryWord {
     display: block;
@@ -56,7 +74,28 @@
     margin-top: 28px;
 }
 
-@media (max-width: 768px) {
-
+.historyList {
+    font-size: 20px;
 }
 
+@media (max-width: 768px) {
+    .mePage small.primaryWord {
+        font-size: 16px;
+    }
+    .mePage small {
+        font-size: 12px;
+    }
+
+    .mePage h2 {
+        font-size: 24px;
+    }
+    .historyList {
+        font-size: 16px;
+    }
+}
+
+.linkText {
+    /* text-decoration: underline; */
+    padding: 0;
+    border-bottom: 1px solid var(--c-middle-gray);
+}

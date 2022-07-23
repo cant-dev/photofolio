@@ -12,7 +12,8 @@ font-family: 'IBM Plex Sans', sans-serif; helvitica*/
 }
 
 :root {
-  font-size: calc(0.4px + 0.08vw);
+  font-size: calc(0.6px + 0.07vw);
+  /* font-size: calc(0.4px + 0.08vw); */
   --h1-size: 32rem;
   --h2-size: 24rem;
   --h3-size: 20rem;
