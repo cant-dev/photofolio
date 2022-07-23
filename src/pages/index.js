@@ -16,12 +16,17 @@ class RootIndex extends React.Component {
     const photoIndexRandom = Math.floor( Math.random() * postRandom['node']['photos'].length )
     const photoSrc = postRandom['node']['photos'][photoIndexRandom]['gatsbyImageData']['images']['fallback']['src']
 
+    const aboutContent = get(this, 'props.data.allContentfulAbout.edges')
+    console.log(aboutContent[0])
+    const indexRandom = Math.floor( Math.random() * aboutContent[0]['node']['topImages'].length )
+    const imageSrc = aboutContent[0]['node']['topImages'][indexRandom]['gatsbyImageData']['images']['fallback']['src']
+
     return (
       <div>
         <Helmet title={siteTitle} />
         <div
           className={styles.screen}
-          style={{ backgroundImage: 'url(' + photoSrc + ')' }}
+          style={{ backgroundImage: 'url(' + imageSrc + ')' }}
         >
           <h1 className={styles.title}>
             <Link to="/film/">{Content.topPageWord}</Link>
@@ -49,6 +54,15 @@ export const pageQuery = graphql`
           slug
           publishDate(formatString: "YYYY MMMM")
           photos {
+            gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+          }
+        }
+      }
+    }
+    allContentfulAbout {
+      edges {
+        node {
+          topImages {
             gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
           }
         }
