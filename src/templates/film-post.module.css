@@ -38,6 +38,21 @@
   height: 10vw;
   border-radius: 60%;
   background-color: var(--b-gray200);
+  animation: 3s ease-in-out 0s infinite normal none running buttonAnime;
+}
+
+@keyframes buttonAnime {
+  0% {
+    filter: brightness(95%);
+  }
+
+  50% {
+    filter: brightness(105%);
+  }
+
+  100% {
+    filter: brightness(95%);
+  }
 }
 
 .centerContent {
