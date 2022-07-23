@@ -133,6 +133,7 @@
   height: 16vw;
   border-radius: 60%;
   background-color: var(--b-gray200);
+  animation: 3s ease-in-out 0s infinite normal none running buttonAnime;
 }
 
 @media (max-width: 768px) {
