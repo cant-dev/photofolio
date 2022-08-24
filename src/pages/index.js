@@ -17,7 +17,6 @@ class RootIndex extends React.Component {
     const photoSrc = postRandom['node']['photos'][photoIndexRandom]['gatsbyImageData']['images']['fallback']['src']
 
     const aboutContent = get(this, 'props.data.allContentfulAbout.edges')
-    console.log(aboutContent[0])
     const indexRandom = Math.floor( Math.random() * aboutContent[0]['node']['topImages'].length )
     const imageSrc = aboutContent[0]['node']['topImages'][indexRandom]['gatsbyImageData']['images']['fallback']['src']
 
