@@ -34,19 +34,28 @@ class Me extends React.Component {
             {/* <small className={styles.addtionalWord}>199X | City / City</small> */}
             <div className={styles.introduction}>
               <p>1996年生まれ 福岡県太宰府市出身</p>
-              <p>人間が、心地良いと感じることに執着があります。</p>
+              <p>
+                人間が、本来的に心地良いと感じることに興味があり、写真の作品や、本業のサービス制作の仕事に展開しています。
+              </p>
               <p>
                 良い体験を考えることが好きで、面白いアイデア・企画などあれば巻き込んで頂けると嬉しいです。
               </p>
               <p>
-                できること / レジュメは
-                <span className={styles.linkText}>こちら</span>
+                お仕事に関して、レジュメは
+                <a
+                  href="https://1996yono.notion.site/1996yono/Yasuhiro-Ono-cf3f4edba5374fd3858f4fe5d26a0b76"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className={styles.linkText}>こちら</span>
+                </a>
+                を見てください
               </p>
               <br></br>
               <p>
-                趣味で真剣に写真撮影の活動をしています。プロフィール写真から作撮まで、交通費だけで受けます。
+                趣味で真剣に写真撮影の活動をしています。プロフィール写真から作撮まで、交通費だけで伺います。
               </p>
-              <p>お気軽にSNSからご連絡を貰えると、喜びます。</p>
+              <p>お気軽にSNSからご連絡をお待ちしております！</p>
             </div>
             <div>
               <small>Job</small>
@@ -70,10 +79,10 @@ class Me extends React.Component {
               <small>Educated</small>
               <ul>
                 <li>
-                  <span>2011 - 2014 </span>福岡県立太宰府高等学校
+                  <span>2014 - 2018 </span>明治大学
                 </li>
                 <li>
-                  <span>2014 - 2018 </span>明治大学
+                  <span>2011 - 2014 </span>福岡県立太宰府高等学校
                 </li>
               </ul>
             </div>
