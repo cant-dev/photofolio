@@ -9,19 +9,19 @@
 
 .backLink {
   position: absolute;
-  top: 2vw;
-  left: 2vw;
+  top: 6vw;
+  left: 6vw;
   color: var(--b-gray200);
   font-size: var(--h6-size);
   font-weight: 700;
 }
 .backArrow{
   display: inline-block;
-  width: 4rem;
-  height: 4rem;
-  border: 5px solid;
-  border-color:  transparent transparent var(--b-gray200) var(--b-gray200);
-  transform: rotate(45deg);
+  width: 16rem;
+  height: 16rem;
+  border: 4rem solid;
+  border-color: var(--b-gray200) var(--b-gray200) transparent transparent;
+  transform: rotate(-135deg);
 }
 
 .content {

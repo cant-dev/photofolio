@@ -63,7 +63,7 @@ class FilmPostTemplate extends React.Component {
       <div>
         <Link to="/film">
           <div className={styles.backLink}>
-            <div className={styles.backArrow}></div>back to index
+            <div className={styles.backArrow}></div>
           </div>
         </Link>
         {/* <div className={styles.screenWrapper}> */}

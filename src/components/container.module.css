@@ -38,7 +38,7 @@
   align-items: center;
   color: var(--c-light-gray);
   font-weight: 700;
-  height: 240px;
+  height: calc(var(--pattern-width));
   font-size: 16rem;
 }
 

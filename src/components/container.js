@@ -8,7 +8,7 @@ export default ({ children }) => (
       <Link to={`/`}>
         <div className={styles.topButtonBlock}>
           <div className={styles.upForwardMark}></div>
-          <div className={styles.topText}>TOP</div>
+          {/* <div className={styles.topText}>TOP</div> */}
         </div>
       </Link>
     </div>
