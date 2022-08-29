@@ -14,11 +14,11 @@
 .previewTitle {
   margin-top: 8rem;
   margin-bottom: 40rem;
-  font-size: 1.3em;
+  font-size: 1.1em;
   text-align: center;
-  /* font-family: 'IBM Plex Sans', sans-serif; */
-  font-weight: 700;
-  color: var(--c-middle-black);
+  font-family: var(--f1-family);
+  font-weight: 400;
+  /* color: var(--c-middle-black); */
 }
 
 .preview {
