@@ -48,8 +48,8 @@ class BlogPostTemplate extends React.Component {
     const post = get(this.props, 'data.contentfulBlogPost')
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     
-    const render = post.bodyRichText && renderRichText(post.bodyRichText, options)
-    console.log(render)
+    // const render = post.bodyRichText && renderRichText(post.bodyRichText, options)
+    // console.log(render)
     return (
       <Layout location={this.props.location}>
         <div style={{ background: '#fff' }}>
@@ -65,7 +65,7 @@ class BlogPostTemplate extends React.Component {
               {post.publishDate}
             </p>
             
-            {render}
+            {/* {render} */}
           </div>
         </div>
       </Layout>
@@ -85,15 +85,15 @@ export const pageQuery = graphql`
     contentfulBlogPost(slug: { eq: $slug }) {
       title
       publishDate(formatString: "MMMM Do, YYYY")
-      bodyRichText {
-        raw
-        references {
-          contentful_id
-          __typename
-          title
-          gatsbyImageData
-        }
-      }
+      # bodyRichText {
+      #   raw
+      #   references {
+      #     contentful_id
+      #     __typename
+      #     title
+      #     gatsbyImageData
+      #   }
+      # }
     }
   }
 `

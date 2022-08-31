@@ -49,6 +49,7 @@ export const pageQuery = graphql`
           slug
           publishDate(formatString: "YYYY / M / DD ")
           tags
+          externalLink
         }
       }
     }
