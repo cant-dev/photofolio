@@ -37,27 +37,6 @@
     margin: 0;
 }
 
-/* .bioImg {
-    position: relative;
-    width: 100%;
-}
-
-.bioImg::before {
-    content: "";
-    display: block;
-    padding-top: 66.66%;
-}
-
-.bioImgInner {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-size: cover;
-    background-position: center center;
-} */
-
 .mePage small.primaryWord {
     display: block;
     margin-top: 40px;
