@@ -85,12 +85,6 @@
   left: 0;
 }
 
-/* .imgBlock {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  flex-shrink: 1;
-} */
 .imgBlockInner > div {
   top: 50%;
   left: 50%;
