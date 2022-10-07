@@ -26,15 +26,15 @@ const options = {
     // /* インライン要素の内部リンク表示用のコンポーネント */
     // [INLINES.EMBEDDED_ENTRY]: node => <SomeEntryInlineComponent content={ node } />,
     // /* インライン要素のハイパーリンク表示用のコンポーネント その他のハイパーリンクも似たような記述で行けるはず */
-    // [INLINES.HYPERLINK]: node => <SomeHyperlinkComponent content={ node } />,
-    [BLOCKS.EMBEDDED_ASSET]: node => node => {
-      return (
-          <GatsbyImage
-              image={ getImage(node.data.target) }
-              alt={ node.data.target.title }
-          />
-      )
-    },
+    // [INLINES.HYPERLINK]: node => <SomeHyperlinkComponent content={ node } />, 
+    // [BLOCKS.EMBEDDED_ASSET]: node => node => {
+    //   return (
+    //       <GatsbyImage
+    //           image={ getImage(node.data.target) }
+    //           alt={ node.data.target.title }
+    //       />
+    //   )
+    // },
   },
   renderMark: {
     // /* <b> 用のコンポーネント 下線とかイタリックも似たような記述で行けるはず */
@@ -48,8 +48,8 @@ class BlogPostTemplate extends React.Component {
     const post = get(this.props, 'data.contentfulBlogPost')
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     
-    // const render = post.bodyRichText && renderRichText(post.bodyRichText, options)
-    // console.log(render)
+    const render = post.bodyRichText && renderRichText(post.bodyRichText, options)
+    console.log("render", render)
     return (
       <Layout location={this.props.location}>
         <div style={{ background: '#fff' }}>
@@ -65,7 +65,7 @@ class BlogPostTemplate extends React.Component {
               {post.publishDate}
             </p>
             
-            {/* {render} */}
+            {render}
           </div>
         </div>
       </Layout>
@@ -85,15 +85,15 @@ export const pageQuery = graphql`
     contentfulBlogPost(slug: { eq: $slug }) {
       title
       publishDate(formatString: "MMMM Do, YYYY")
-      # bodyRichText {
-      #   raw
-      #   references {
-      #     contentful_id
-      #     __typename
-      #     title
-      #     gatsbyImageData
-      #   }
-      # }
+      bodyRichText {
+        raw
+        references {
+          contentful_id
+          __typename
+          title
+          gatsbyImageData
+        }
+      }
     }
   }
 `

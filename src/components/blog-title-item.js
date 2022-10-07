@@ -8,8 +8,8 @@ export default ({ article }) => (
   <div className={styles.box}>
     <div>
       <h3 className={styles.title}>
-        {/* <Link to={`/blog/${article.slug}`}>{article.title}</Link> */}
-        <a href={article.externalLink}>{article.title}</a>
+        <Link to={`/blog/${article.slug}`}>{article.title}</Link>
+        {/* <a href={article.externalLink}>{article.title}</a> */}
       </h3>
     </div>
     <div>
