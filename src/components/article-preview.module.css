@@ -18,7 +18,7 @@
   text-align: center;
   font-family: var(--f1-family);
   font-weight: 400;
-  /* color: var(--c-middle-black); */
+  color: var(--c-middle-black);
 }
 
 .preview {
