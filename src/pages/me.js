@@ -33,40 +33,26 @@ class Me extends React.Component {
             <h2>Yasuhiro Ono</h2>
             {/* <small className={styles.addtionalWord}>199X | City / City</small> */}
             <div className={styles.introduction}>
-              <p>1996年生まれ 福岡県太宰府市出身</p>
+              <p>1996年、福岡県太宰府市出身生まれ。</p>
               <p>
-                アマチュアで写真作品を撮っている26歳。東京都 世田谷区のほとりで、ひっそり活動中。
+                HR系事業会社でリサーチャー/デザイナーとして働きながら、プライベートでサービスを開発をしています。
               </p>
-              <p>
-                普段はWEBサービス開発領域で、企画・デザイン・リサーチの仕事をしています。
-              </p>
-              <p>
-              人にとって嬉しい体験・心地良いサービスを提供することを目標に、プライベートで個人開発などもしています。
-              </p>
-
-              <p>
-                お仕事に関して、レジュメは
-                <a
-                  href="https://1996yono.notion.site/1996yono/Yasuhiro-Ono-cf3f4edba5374fd3858f4fe5d26a0b76"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className={styles.linkText}>こちら</span>
-                </a>
-                を見てください
-              </p>
-              <br></br>
-              <p>
-                プロフィール写真から作撮まで、ドリンク一杯でご一緒させて頂きます。
-              </p>
-              <p>お気軽にSNSからDMください！</p>
+              <p>より良いユーザー体験 / まだ世にない価値を追い求め精進中。</p>
+              <p>傍ら、フォトグラファーとしてアマチュアで活動をしています。</p>
+              <p>Instagram / Twitter からご連絡をお待ちしております。</p>
             </div>
             <div>
               <small>Job</small>
-              <h3>Design Reseacher</h3>
+              <h3 className={styles.jobContent}>Design Reseacher</h3>
+              <span className={styles.jobContentSmall}>
+                <a href="" target="_blank" rel="noopener noreferrer">
+                  <span className={styles.linkText}>こちらのページ</span>
+                </a>
+                から詳しい職務をご覧頂けます。
+              </span>
             </div>
             <div className={styles.historyList}>
-              <small>Work history</small>
+              <small>history</small>
               <ul>
                 <li>
                   <span>2021 - now </span> パーソルキャリア株式会社
@@ -77,16 +63,8 @@ class Me extends React.Component {
                 <li>
                   <span>2018 - 2019 </span>西日本シティ銀行
                 </li>
-              </ul>
-            </div>
-            <div className={styles.historyList}>
-              <small>Educated</small>
-              <ul>
                 <li>
-                  <span>2014 - 2018 </span>明治大学
-                </li>
-                <li>
-                  <span>2011 - 2014 </span>福岡県立太宰府高等学校
+                  <span>2014 - 2018 </span>明治大学 商学部
                 </li>
               </ul>
             </div>
