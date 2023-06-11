@@ -11,7 +11,7 @@
   font-size: var(--h5-size);
   font-weight: 700;
   text-decoration: underline;
-  /* text-decoration-color: black;*/
+  line-height: 0.8;
 }
 .title:hover {
   text-decoration: none;

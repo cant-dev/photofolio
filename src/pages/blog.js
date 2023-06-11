@@ -47,7 +47,7 @@ export const pageQuery = graphql`
         node {
           title
           slug
-          publishDate(formatString: "YYYY / M / DD ")
+          publishDate(formatString: "YYYY/MM/DD")
           tags
           externalLink
         }
