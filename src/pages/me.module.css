@@ -16,16 +16,19 @@
     font-family: var(--f1-family);
     font-weight: 700;
     line-height: 100%;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .mePage h2 {
-    font-family: var(--f3-family);
+    font-family: var(--f1-family);
+    color: var(--c-middle-black);
     font-style: italic;
     font-weight: 700;
     font-size: 48px;
     line-height: 100%;
     margin: 0;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .mePage h3 {
@@ -45,20 +48,13 @@
     font-size: 12px;
 }
 
-.mePage small.primaryWord {
+.mePage small {
     display: block;
-    margin-top: 40px;
-    font-size: 32px;
 }
 
-.mePage small.addtionalWord{
-    display: block;
-    margin-top: 0px;
-    font-size: 24px;
-}
 
 .introduction {
-    margin-top: 28px;
+    /* margin-top: 28px; */
 }
 
 .historyList {

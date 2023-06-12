@@ -6,14 +6,14 @@ import * as styles from './me.module.css'
 import Layout from '../components/layout'
 import BlogTitleItem from '../components/blog-title-item'
 import topImage from '../images/topsnow.png'
-import { GatsbyImage} from 'gatsby-plugin-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 class Me extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const aboutContent = get(this, 'props.data.allContentfulAbout.edges')
 
-    const profileImage = aboutContent[0].node.profileImage;
+    const profileImage = aboutContent[0].node.profileImage
 
     console.log(aboutContent, aboutContent[0].node.profileImage)
 
@@ -29,9 +29,8 @@ class Me extends React.Component {
               style={{ height: '540px' }}
               imgStyle={{ objectFit: 'contain' }}
             />
-            <small className={styles.primaryWord}>Bio</small>
             <h2>Yasuhiro Ono</h2>
-            {/* <small className={styles.addtionalWord}>199X | City / City</small> */}
+            <small>Bio</small>
             <div className={styles.introduction}>
               <p>1996年、福岡県太宰府市出身生まれ。</p>
               <p>
