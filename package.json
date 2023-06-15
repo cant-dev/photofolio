@@ -29,7 +29,7 @@
     "prettier": "^2.8.8"
   },
   "engines": {
-    "node": "16.x"
+    "node": "18.x"
   },
   "homepage": "https://github.com/contentful/starter-gatsby-blog#readme",
   "keywords": [
