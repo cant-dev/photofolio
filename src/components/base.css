@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=IBM+Plex+Sans:wght@400;500;700&family=Roboto:wght@400;700&display=swap');
 /* font-family: 'Didact Gothic', sans-serif; futura
 font-family: 'IBM Plex Sans', sans-serif; helvitica*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @font-face {
   font-family: 'Avenir';
@@ -23,6 +24,7 @@ font-family: 'IBM Plex Sans', sans-serif; helvitica*/
   --f1-family: 'Roboto', sans-serif; /* 400, 700 */
   --f2-family: 'Didact Gothic', sans-serif; /* no weight */
   --f3-family: 'IBM Plex Sans', sans-serif; /* 400, 700 */
+  --f-noto-sans: 'Noto Sans JP', sans-serif; /* 400, 700 */
   --c-base-black: #3d3d3d;
   --c-middle-black: #535353;
   --c-middle-gray: #a7a7a7;

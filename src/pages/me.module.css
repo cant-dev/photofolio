@@ -5,6 +5,7 @@
     margin: auto;
     padding: 0 4%;
     /* padding-bottom: 120px; */
+    font-family: var(--f-noto-sans);
     font-size: 16px;
     letter-spacing: 0.02em;
 }
