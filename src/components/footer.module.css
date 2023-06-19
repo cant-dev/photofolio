@@ -5,7 +5,7 @@
   margin-top: 200rem;
   margin-bottom: 56px;
   width: 100%;
-  font-size: 20rem;
+  font-size: 16rem;
   font-weight: 700;
 }
 @media (max-width: 768px) {
@@ -17,7 +17,7 @@
 .partition {
   display: block;
   width: 3.2rem;
-  height: 40rem;
+  height: 20rem;
   background-color: var(--c-base-black);
   /* border-left: 4px solid var(--c-base-black); */
   content: '';
