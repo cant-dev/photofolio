@@ -1,3 +1,3 @@
 export class Content { 
-  static topPageWord = "Yasuhiro Ono"
+  static topPageWord = "Photographer Name"
 }
