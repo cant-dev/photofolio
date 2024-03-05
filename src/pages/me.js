@@ -30,40 +30,34 @@ class Me extends React.Component {
               imgStyle={{ objectFit: 'contain' }}
             />
             <h2>Yasuhiro Ono</h2>
-            <small>Bio</small>
             <div className={styles.introduction}>
-              <p>1996年、福岡県太宰府市出身生まれ。</p>
-              <p>
-                HR系事業会社でリサーチャー/デザイナーとして働きながら、プライベートでサービスを開発をしています。
-              </p>
-              <p>より良いユーザー体験 / まだ世にない価値を追い求め精進中。</p>
-              <p>傍ら、フォトグラファーとしてアマチュアで活動をしています。</p>
-              <p>Instagram / Twitter からご連絡をお待ちしております。</p>
-            </div>
-            <div>
-              <small>Job</small>
-              <h3 className={styles.jobContent}>Design Reseacher</h3>
+              <div>Design Reseacher</div>
+              <div>photographer (amatur)</div>
               <span className={styles.jobContentSmall}>
+                詳しくは
                 <a href="" target="_blank" rel="noopener noreferrer">
                   <span className={styles.linkText}>こちらのページ</span>
                 </a>
-                から詳しい職務をご覧頂けます。
               </span>
             </div>
             <div className={styles.historyList}>
-              <small>history</small>
+              <small className={styles.itemTitle}>history</small>
               <ul>
                 <li>
-                  <span>2021 - now </span> パーソルキャリア株式会社
+                  <span>2021 - now </span>
+                  <span className={styles.companyItem2}>PERSOL CAREER CO., LTD.</span>
                 </li>
                 <li>
-                  <span>2019 - 2021 </span>株式会社 tsumug
+                  <span>2019 - 2021 </span>
+                  <span className={styles.companyItem}>tsumug.inc</span>
                 </li>
                 <li>
-                  <span>2018 - 2019 </span>西日本シティ銀行
+                  <span>2018 - 2019 </span>
+                  <span className={styles.companyItem}>The Nishi-Nippon City Bank, Ltd.</span>
                 </li>
                 <li>
-                  <span>2014 - 2018 </span>明治大学 商学部
+                  <span>2014 - 2018 </span>
+                  <span className={styles.companyItem}>Meiji Univ commerce</span>
                 </li>
               </ul>
             </div>

@@ -10,26 +10,28 @@
     letter-spacing: 0.02em;
 }
 
-.mePage small{
+small.itemTitle{
     display: block;
     margin-top: 36px;
     margin-bottom: 8px;
     color: var(--c-middle-gray);
-    font-family: var(--f1-family);
+    font-family: var(--f4-family);
     font-weight: 700;
     line-height: 100%;
     font-size: 20px;
+    text-align: center;
 }
 
 .mePage h2 {
-    font-family: var(--f1-family);
+    font-family: var(--f4-family);
     color: var(--c-middle-black);
-    font-style: italic;
-    font-weight: 700;
+    font-weight: 800;
     font-size: 48px;
+    letter-spacing: 0.2em;
     line-height: 100%;
     margin: 0;
-    margin-top: 10px;
+    margin-top: 16px;
+    margin-bottom: 60px;
     text-align: center;
 }
 
@@ -43,11 +45,11 @@
     margin-right: 16px;
 }
 
-.jobContent {
-    display: inline;
-}
 .jobContentSmall {
+    display: block;
+    font-family: var(--f5-family);
     font-size: 12px;
+    margin-top: 20px;
 }
 
 .mePage small {
@@ -56,11 +58,39 @@
 
 
 .introduction {
-    /* margin-top: 28px; */
+    margin: auto;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.introduction > div {
+    font-family: var(--f4-family);
+    color: var(--c-middle-black);
+    font-weight: 800;
+    font-size: 24px;
 }
 
 .historyList {
     /* font-size: 16px; */
+}
+
+.historyList ul {
+    width: 400px;
+    padding-left: 60px;
+    margin: auto;
+    font-family: var(--f4-family);
+    color: var(--c-middle-black);
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.companyItem {
+    display: inline-block;
+    margin-left: 15px;
+}
+.companyItem2 {
+    display: inline-block;
+    margin-left: 25px;
 }
 
 @media (max-width: 768px) {
@@ -72,7 +102,7 @@
     }
 
     .mePage h2 {
-        font-size: 24px;
+        font-size: 40px;
     }
     .historyList {
         font-size: 16px;
