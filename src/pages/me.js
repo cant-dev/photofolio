@@ -23,10 +23,9 @@ class Me extends React.Component {
           <Helmet title={siteTitle} />
           <div className={styles.mePage}>
             <GatsbyImage
-              className=""
+              className={styles.topImage}
               alt=""
               image={profileImage.gatsbyImageData}
-              style={{ height: '540px' }}
               imgStyle={{ objectFit: 'contain' }}
             />
             <h2>Yasuhiro Ono</h2>

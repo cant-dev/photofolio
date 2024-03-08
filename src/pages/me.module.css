@@ -10,6 +10,11 @@
     letter-spacing: 0.02em;
 }
 
+.topImage {
+    width: 480px;
+    margin: auto;
+}
+
 small.itemTitle{
     display: block;
     margin-top: 36px;
@@ -61,17 +66,17 @@ small.itemTitle{
     margin: auto;
     text-align: center;
     margin-bottom: 60px;
+    font-size: 24px;
 }
 
 .introduction > div {
     font-family: var(--f4-family);
     color: var(--c-middle-black);
     font-weight: 800;
-    font-size: 24px;
 }
 
 .historyList {
-    /* font-size: 16px; */
+    font-size: 16px;
 }
 
 .historyList ul {
@@ -81,7 +86,6 @@ small.itemTitle{
     font-family: var(--f4-family);
     color: var(--c-middle-black);
     font-weight: 800;
-    font-size: 16px;
 }
 
 .companyItem {
@@ -94,18 +98,31 @@ small.itemTitle{
 }
 
 @media (max-width: 768px) {
+    .mePage {
+        width: 80vw;
+    } 
     .mePage small.primaryWord {
         font-size: 16px;
     }
     .mePage small {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .mePage h2 {
-        font-size: 40px;
+        font-size: 28px;
+    }
+    .topImage {
+        width: 320px;
+        margin: auto;
+    }
+    .introduction {
+        font-size: 20px;
     }
     .historyList {
-        font-size: 16px;
+        font-size: 14px;
+    }
+    .historyList ul {
+        padding: 0;
     }
 }
 
