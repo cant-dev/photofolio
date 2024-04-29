@@ -5,8 +5,8 @@ import * as styles from './footer.module.css'
 export default () => (
   <ul className={styles.footer}>
     <li className={styles.item}>
-      <a href="https://twitter.com/only_dog_win" target="_blank">
-        Twitter
+      <a href="https://x.com/ono_yah" target="_blank">
+        X
       </a>
     </li>
     <li className={styles.partition}></li>
