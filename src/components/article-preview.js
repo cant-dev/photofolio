@@ -38,23 +38,12 @@ export default ({ article, articleNumber }) => (
         </div>
       </div>
     </div>
+    {/*     
     <div>
       <Link to={`/film/${article.slug}`}>
         <h3 className={styles.previewTitle}>{article.title}</h3>
       </Link>
-    </div>
-    {/* description */}
-    {/* <div
-      dangerouslySetInnerHTML={{
-        __html: article.description.childMarkdownRemark.html,
-      }}
-    /> */}
-    {/* tags */}
-    {/* {article.tags &&
-      article.tags.map((tag) => (
-        <p className={styles.tag} key={tag}>
-          {tag}
-        </p>
-      ))} */}
+    </div> 
+    */}
   </div>
 )
