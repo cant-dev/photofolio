@@ -59,7 +59,8 @@ class FilmPostTemplate extends React.Component {
     showingPhoto = <GatsbyImage 
       image={post.photos[this.state.page].gatsbyImageData} 
       style={{ height: "100%", width: "100%" }}
-      imgStyle={{ objectFit: "contain" }}
+      imgStyle={{ objectFit: "contain" }} 
+      loading="eager"
     />;
 
     return (
