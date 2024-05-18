@@ -61,6 +61,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           nodes {
             title
             slug
+            publishDate(formatString: "MMMM Do, YYYY")
+            photos {
+              gatsbyImageData(
+                layout: FULL_WIDTH
+                placeholder: BLURRED
+                # width: 424
+                # height: 212
+              )
+            }
           }
         }
       }
@@ -91,9 +100,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         path: `/film/${post.slug}/`,
         component: filmPost,
         context: {
+          title: post.title,
           slug: post.slug,
+          publishDate: post.publishDate,
           previousPostSlug,
           nextPostSlug,
+          photos: post.photos,
         },
       })
     })

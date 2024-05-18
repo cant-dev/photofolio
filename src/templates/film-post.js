@@ -15,22 +15,24 @@ class FilmPostTemplate extends React.Component {
     this.state = {
       page: 0,
     };
-    this.post = get(this.props, 'data.contentfulFilmPost');
+    this.photos = this.props.pageContext.photos;
+    this.post = this.props.pageContext;
+    // this.post = get(this.props, 'data.contentfulFilmPost');
     this.photoPageMax = this.post.photos.length;
   }
 
   rightButton = () => {
     this.turnPage(1);
-    console.log("debug##page:", this.state.page);
+    // console.log("debug##page:", this.state.page);
   }
 
   leftButton = () => {
     this.turnPage(-1);
-    console.log("debug##page:", this.state.page);
+    // console.log("debug##page:", this.state.page);
   }
 
   turnPage = (num) => {
-    console.log(this.photoPageMax, this.state);
+    // console.log(this.photoPageMax, this.state);
     this.setState((state, props) => ({
       page: state.page + num
     }));
@@ -45,11 +47,12 @@ class FilmPostTemplate extends React.Component {
       }));
     }
       
-    console.log(this.photoPageMax, this.state);
+    // console.log(this.photoPageMax, this.state);
   }
 
   render() {
-    const post = get(this.props, 'data.contentfulFilmPost')
+    // const post = get(this.props, 'data.contentfulFilmPost')
+    const post = this.post;
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
 
     let showingPhoto;
@@ -118,14 +121,7 @@ export const pageQuery = graphql`
     contentfulFilmPost(slug: { eq: $slug }) {
       title
       publishDate(formatString: "MMMM Do, YYYY")
-      photos {
-        gatsbyImageData(
-          layout: FULL_WIDTH
-          placeholder: BLURRED
-          # width: 424
-          # height: 212
-        )
-      }
+      
     }
   }
 `
