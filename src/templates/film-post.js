@@ -70,9 +70,7 @@ class FilmPostTemplate extends React.Component {
             <div className={styles.backArrow}></div>
           </div>
         </Link>
-        {/* <div className={styles.screenWrapper}> */}
         <div className={styles.screen}>
-          {/* <div className={styles.screenInner}> */}
           <Helmet title={`${post.title} | ${siteTitle}`} />
           <div className={styles.content}>
             <div className={styles.turnButton} onClick={this.leftButton}></div>
@@ -82,9 +80,6 @@ class FilmPostTemplate extends React.Component {
               </div>
               <div className={styles.imgBlock}>
                 <div className={styles.imgBlockInner}>
-                  {/* {post.photos.map((photo) => {
-                        return <GatsbyImage image={photo.gatsbyImageData} />
-                      })} */}
                   {showingPhoto}
                 </div>
               </div>
@@ -102,9 +97,21 @@ class FilmPostTemplate extends React.Component {
             </div>
             <div className={styles.turnButton} onClick={this.rightButton}></div>
           </div>
-          {/* </div> */}
         </div>
-        {/* </div> */}
+        {/* 画像プリロード用の非表示要素 */}
+        <div style={{ position: 'absolute' }}>
+          <div style={{ visibility: "hidden", height: 0 }}>
+            {post.photos.map((photo, index) => (
+              <GatsbyImage 
+                key={index}
+                image={photo.gatsbyImageData} 
+                loading="eager"
+                width="1px"
+                height="1px"
+              />
+            ))}
+          </div>
+        </div>
       </div>
     )
   }
