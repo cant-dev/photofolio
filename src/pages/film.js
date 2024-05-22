@@ -59,7 +59,7 @@ export const pageQuery = graphql`
           photos {
             gatsbyImageData(
               layout: FULL_WIDTH
-              placeholder: BLURRED
+              placeholder: DOMINANT_COLOR
             )
           }
         }
